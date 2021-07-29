@@ -1,0 +1,31 @@
+[
+{
+  "name":"com.maqboolsolutions.flywaygraalvmtest.Main",
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"main","parameterTypes":["java.lang.String[]"] }
+  ]
+},
+{
+  "name":"org.hsqldb.Constraint[]"
+},
+{
+  "name":"org.hsqldb.Expression[]"
+},
+{
+  "name":"org.hsqldb.RangeGroup[]"
+},
+{
+  "name":"org.hsqldb.Routine[]"
+},
+{
+  "name":"org.hsqldb.dbinfo.DatabaseInformationFull",
+  "methods":[{"name":"<init>","parameterTypes":["org.hsqldb.Database"] }]
+},
+{
+  "name":"org.hsqldb.index.Index[]"
+},
+{
+  "name":"org.hsqldb.jdbc.JDBCDriver"
+}
+]

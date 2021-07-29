@@ -1,0 +1,12 @@
+{
+  "resources":{
+  "includes":[
+    {"pattern":"\\QMETA-INF/services/java.sql.Driver\\E"}, 
+    {"pattern":"\\Qorg/hsqldb/resources/information-schema.sql\\E"}, 
+    {"pattern":"\\Qorg/hsqldb/resources/jdklogging-default.properties\\E"}, 
+    {"pattern":"\\Qorg/hsqldb/resources/lob-schema.sql\\E"}
+  ]},
+  "bundles":[
+    {"name":"org.hsqldb.resources.sql-state-messages"}
+  ]
+}
