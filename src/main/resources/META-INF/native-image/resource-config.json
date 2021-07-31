@@ -11,8 +11,6 @@
     {"pattern":"\\Qorg/slf4j/impl/StaticLoggerBinder.class\\E"}
   ]},
   "bundles":[
-    {"name":"com.sun.javafx.tk.quantum.QuantumMessagesBundle"}, 
-    {"name":"com/sun/javafx/scene/control/skin/resources/controls"}, 
     {"name":"org.hsqldb.resources.info-column-remarks"}, 
     {"name":"org.hsqldb.resources.info-table-remarks"}, 
     {"name":"org.hsqldb.resources.sql-state-messages"}

@@ -1,0 +1,386 @@
+[Sat Jul 31 14:54:11 PKT 2021][INFO] ==================== COMPILE TASK ====================
+[Sat Jul 31 14:54:13 PKT 2021][FINE] PB Command for check version: D:\Programs\graalvm-svm-windows-gluon-21.2.0-dev\bin\java -version
+[Sat Jul 31 14:54:13 PKT 2021][FINE] Start process check version...
+[Sat Jul 31 14:54:13 PKT 2021][FINE] [SUB] openjdk version "11.0.11" 2021-04-20
+[Sat Jul 31 14:54:13 PKT 2021][FINE] [SUB] OpenJDK Runtime Environment GraalVM 21.2.0-dev (build 11.0.11+8-jvmci-21.2-b02)
+[Sat Jul 31 14:54:13 PKT 2021][FINE] [SUB] OpenJDK 64-Bit Server VM GraalVM 21.2.0-dev (build 11.0.11+8-jvmci-21.2-b02, mixed mode, sharing)
+[Sat Jul 31 14:54:13 PKT 2021][FINE] Result for check version: 0
+[Sat Jul 31 14:54:13 PKT 2021][INFO] We will now compile your code for x86_64-microsoft-windows. This may take some time.
+[Sat Jul 31 14:54:14 PKT 2021][FINE] Extracting native libs to: D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\lib
+[Sat Jul 31 14:54:14 PKT 2021][FINE] Looking for resource: /native/windows/launcher.c
+[Sat Jul 31 14:54:14 PKT 2021][FINE] PB Command for compile-additional-sources: cl -c -DSUBSTRATE /MD /D_UNICODE /DUNICODE /DWIN32 /D_WINDOWS -ID:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\FlywayOnGraalVMNativeImageTest launcher.c
+[Sat Jul 31 14:54:14 PKT 2021][FINE] Start process compile-additional-sources...
+[Sat Jul 31 14:54:14 PKT 2021][FINE] [SUB] Microsoft (R) C/C++ Optimizing Compiler Version 19.28.29914 for x64
+[Sat Jul 31 14:54:14 PKT 2021][FINE] [SUB] Copyright (C) Microsoft Corporation.  All rights reserved.
+[Sat Jul 31 14:54:14 PKT 2021][FINE] [SUB] 
+[Sat Jul 31 14:54:14 PKT 2021][FINE] [SUB] launcher.c
+[Sat Jul 31 14:54:14 PKT 2021][FINE] Result for compile-additional-sources: 0
+[Sat Jul 31 14:54:15 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\com\maqboolsolutions\flywaygraalvmtest\Main.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766\com\maqboolsolutions\flywaygraalvmtest\Main.class
+[Sat Jul 31 14:54:15 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\db\migration\V1_0_1__Create_Table.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766\db\migration\V1_0_1__Create_Table.class
+[Sat Jul 31 14:54:15 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\db\migration\V1_0_2__Insert_Data.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766\db\migration\V1_0_2__Insert_Data.class
+[Sat Jul 31 14:54:15 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\log4j.xml to C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766\log4j.xml
+[Sat Jul 31 14:54:15 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\reflect-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766\META-INF\native-image\reflect-config.json
+[Sat Jul 31 14:54:15 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\resource-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766\META-INF\native-image\resource-config.json
+[Sat Jul 31 14:54:15 PKT 2021][FINE] PB Command for jar: D:\Programs\graalvm-svm-windows-gluon-21.2.0-dev\bin\jar.exe cf C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766\classes.jar -C C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766 .
+[Sat Jul 31 14:54:15 PKT 2021][FINE] Start process jar...
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Result for jar: 0
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning for init build time files
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766\classes.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning for reflection files
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Adding classes from D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar::META-INF/substrate/config/reflectionconfig-x86_64-windows.json
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar::META-INF/substrate/config/reflectionconfig.json
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar::META-INF/substrate/config/reflectionconfig.json
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar::META-INF/substrate/config/reflectionconfig-x86_64-windows.json
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar::META-INF/substrate/config/reflectionconfig.json
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766\classes.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning for JNI files
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar::META-INF/substrate/config/jniconfig-x86_64-windows.json
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar::META-INF/substrate/config/jniconfig.json
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766\classes.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning for resource files
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Scanning C:\Users\MAQBOO~1\AppData\Local\Temp\classes4110774865235450766\classes.jar
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\com\maqboolsolutions\flywaygraalvmtest\Main.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes82972797625751753\com\maqboolsolutions\flywaygraalvmtest\Main.class
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\db\migration\V1_0_1__Create_Table.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes82972797625751753\db\migration\V1_0_1__Create_Table.class
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\db\migration\V1_0_2__Insert_Data.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes82972797625751753\db\migration\V1_0_2__Insert_Data.class
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\log4j.xml to C:\Users\MAQBOO~1\AppData\Local\Temp\classes82972797625751753\log4j.xml
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\reflect-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes82972797625751753\META-INF\native-image\reflect-config.json
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\resource-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes82972797625751753\META-INF\native-image\resource-config.json
+[Sat Jul 31 14:54:16 PKT 2021][FINE] PB Command for jar: D:\Programs\graalvm-svm-windows-gluon-21.2.0-dev\bin\jar.exe cf C:\Users\MAQBOO~1\AppData\Local\Temp\classes82972797625751753\classes.jar -C C:\Users\MAQBOO~1\AppData\Local\Temp\classes82972797625751753 .
+[Sat Jul 31 14:54:16 PKT 2021][FINE] Start process jar...
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Result for jar: 0
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning for resource bundles
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar::META-INF/substrate/config/resourcebundles
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar::META-INF/substrate/config/resourcebundles
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Scanning C:\Users\MAQBOO~1\AppData\Local\Temp\classes82972797625751753\classes.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Copied resource D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\storage-4.0.11-desktop.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Copied resource D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\storage-4.0.11.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Copied resource D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\util-4.0.11.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Copied resource D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\log4j-1.2.17.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Copied resource D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\flyway-core-7.12.0.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Copied resource D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\hsqldb-2.6.0.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Copied resource C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\javafx.base.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Copied resource C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\javafx.controls.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Copied resource C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\javafx.graphics.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Copied resource D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\slf4j-api-1.7.30.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Copied resource D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Class-Path manifest entry for pathing jar: ..\..\..\..\classes deps\storage-4.0.11-desktop.jar deps\storage-4.0.11.jar deps\util-4.0.11.jar deps\log4j-1.2.17.jar deps\flyway-core-7.12.0.jar deps\hsqldb-2.6.0.jar deps\javafx.base.jar deps\javafx.controls.jar deps\javafx.graphics.jar deps\slf4j-api-1.7.30.jar deps\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Pathing jar created at D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\classpathJar.jar
+[Sat Jul 31 14:54:18 PKT 2021][FINE] PB Command for compile: D:\Programs\graalvm-svm-windows-gluon-21.2.0-dev\bin\native-image.cmd "-Djdk.internal.lambda.eagerlyInitialize=false" --no-server -H:+ExitAfterRelocatableImageWrite -H:+SharedLibrary -H:+AddAllCharsets -H:+ReportExceptionStackTraces -H:-DeadlockWatchdogExitOnTimeout "-H:DeadlockWatchdogInterval=0" -H:+RemoveSaturatedTypeFlows "--features=org.graalvm.home.HomeFinderFeature" "-H:TempDirectory=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp" "-H:EnableURLProtocols=http,https" "-H:ReflectionConfigurationFiles=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\reflectionconfig-x86_64-windows.json" "-H:JNIConfigurationFiles=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\jniconfig-x86_64-windows.json" "-H:ResourceConfigurationFiles=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\resourceconfig-x86_64-windows.json" "-H:IncludeResourceBundles=com/sun/javafx/scene/control/skin/resources/controls,com/sun/javafx/scene/control/skin/resources/controls-nt,com.sun.javafx.tk.quantum.QuantumMessagesBundle" "-Dsvm.platform=org.graalvm.nativeimage.Platform$WINDOWS_AMD64" -cp "D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\classpathJar.jar" --allow-incomplete-classpath com.maqboolsolutions.flywaygraalvmtest.Main
+[Sat Jul 31 14:54:18 PKT 2021][FINE] Start process compile...
+[Sat Jul 31 14:54:19 PKT 2021][INFO] [SUB] Warning: Ignoring server-mode native-image argument --no-server.
+[Sat Jul 31 14:54:33 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]    classlist:   7,092.75 ms,  0.94 GB
+[Sat Jul 31 14:54:48 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]        (cap):  13,223.95 ms,  0.94 GB
+[Sat Jul 31 14:54:52 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]        setup:  19,683.94 ms,  0.94 GB
+[Sat Jul 31 14:57:16 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]     (clinit):   1,144.59 ms,  4.27 GB
+[Sat Jul 31 14:57:16 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]   (typeflow):  83,287.61 ms,  4.27 GB
+[Sat Jul 31 14:57:16 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]    (objects):  41,443.85 ms,  4.27 GB
+[Sat Jul 31 14:57:16 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]   (features):  13,447.60 ms,  4.27 GB
+[Sat Jul 31 14:57:16 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]     analysis: 141,557.03 ms,  4.27 GB
+[Sat Jul 31 14:57:21 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]     universe:   4,911.15 ms,  4.20 GB
+[Sat Jul 31 14:57:35 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]      (parse):  13,569.41 ms,  5.27 GB
+[Sat Jul 31 14:58:07 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]     (inline):  32,052.82 ms,  5.95 GB
+[Sat Jul 31 14:59:34 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]    (compile):  86,656.27 ms,  6.04 GB
+[Sat Jul 31 14:59:37 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]      compile: 136,242.64 ms,  6.04 GB
+[Sat Jul 31 14:59:47 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]        image:   9,789.98 ms,  6.11 GB
+[Sat Jul 31 14:59:50 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]        write:   2,801.76 ms,  6.11 GB
+[Sat Jul 31 14:59:50 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:2768]      [total]: 324,460.78 ms,  6.11 GB
+[Sat Jul 31 14:59:50 PKT 2021][INFO] [SUB] # Printing build artifacts to: D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\FlywayOnGraalVMNativeImageTest\com.maqboolsolutions.flywaygraalvmtest.main.build_artifacts.txt
+[Sat Jul 31 14:59:58 PKT 2021][FINE] Result for compile: 0
+[Sat Jul 31 15:00:08 PKT 2021][FINE] Logging process [compile] to file: D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\log\process-compile-1627725607022.log
+[Sat Jul 31 15:00:16 PKT 2021][FINE] PB Command for java-version: D:\Programs\graalvm-svm-windows-gluon-21.2.0-dev\bin\java --version
+[Sat Jul 31 15:00:16 PKT 2021][FINE] Start process java-version...
+[Sat Jul 31 15:00:25 PKT 2021][FINE] [SUB] openjdk 11.0.11 2021-04-20
+[Sat Jul 31 15:00:25 PKT 2021][FINE] [SUB] OpenJDK Runtime Environment GraalVM 21.2.0-dev (build 11.0.11+8-jvmci-21.2-b02)
+[Sat Jul 31 15:00:25 PKT 2021][FINE] [SUB] OpenJDK 64-Bit Server VM GraalVM 21.2.0-dev (build 11.0.11+8-jvmci-21.2-b02, mixed mode, sharing)
+[Sat Jul 31 15:00:25 PKT 2021][FINE] Result for java-version: 0
+[Sat Jul 31 15:01:45 PKT 2021][INFO] ==================== RUN TASK ====================
+[Sat Jul 31 15:02:05 PKT 2021][FINE] PB Command for run until end: D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\FlywayOnGraalVMNativeImageTest.exe
+[Sat Jul 31 15:02:05 PKT 2021][FINE] Start process run until end...
+[Sat Jul 31 15:02:06 PKT 2021][INFO] [SUB] Jul 31, 2021 3:02:06 PM com.sun.javafx.application.PlatformImpl startup
+[Sat Jul 31 15:02:06 PKT 2021][INFO] [SUB] WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @69909c14'
+[Sat Jul 31 15:02:20 PKT 2021][INFO] [SUB] Jul 31, 2021 3:02:20 PM com.gluonhq.attach.util.Platform <clinit>
+[Sat Jul 31 15:02:20 PKT 2021][INFO] [SUB] INFO: javafx.platform is not defined. Desktop will be assumed by default.
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] log4j:WARN Caught Exception while in Loader.getResource. This may be innocuous.
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] java.lang.NoClassDefFoundError
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.apache.log4j.helpers.Loader.class$(Loader.java:106)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.apache.log4j.helpers.Loader.getResource(Loader.java:106)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.apache.log4j.LogManager.<clinit>(LogManager.java:107)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.classinitialization.ClassInitializationInfo.invokeClassInitializer(ClassInitializationInfo.java:375)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.classinitialization.ClassInitializationInfo.initialize(ClassInitializationInfo.java:295)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.slf4j.impl.Log4jLoggerFactory.<init>(Log4jLoggerFactory.java:66)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.slf4j.impl.StaticLoggerBinder.<init>(StaticLoggerBinder.java:72)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:45)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.classinitialization.ClassInitializationInfo.invokeClassInitializer(ClassInitializationInfo.java:375)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.classinitialization.ClassInitializationInfo.initialize(ClassInitializationInfo.java:295)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:417)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:362)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.logging.slf4j.Slf4jLogCreator.createLogger(Slf4jLogCreator.java:27)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.api.logging.LogFactory.getLog(LogFactory.java:80)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.util.ClassUtils.<clinit>(ClassUtils.java:37)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.classinitialization.ClassInitializationInfo.invokeClassInitializer(ClassInitializationInfo.java:375)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.classinitialization.ClassInitializationInfo.initialize(ClassInitializationInfo.java:295)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.util.FeatureDetector.isSlf4jAvailable(FeatureDetector.java:123)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.logging.LogCreatorFactory.getLogCreator(LogCreatorFactory.java:40)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.api.logging.LogFactory.getLog(LogFactory.java:77)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.util.FeatureDetector.<clinit>(FeatureDetector.java:25)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.classinitialization.ClassInitializationInfo.invokeClassInitializer(ClassInitializationInfo.java:375)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.classinitialization.ClassInitializationInfo.initialize(ClassInitializationInfo.java:295)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.logging.LogCreatorFactory.getLogCreator(LogCreatorFactory.java:36)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.api.logging.LogFactory.getLog(LogFactory.java:77)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.<clinit>(Flyway.java:81)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.classinitialization.ClassInitializationInfo.invokeClassInitializer(ClassInitializationInfo.java:375)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.classinitialization.ClassInitializationInfo.initialize(ClassInitializationInfo.java:295)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.maqboolsolutions.flywaygraalvmtest.Main.lambda$start$0(Main.java:61)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at javafx.event.Event.fireEvent(Event.java:198)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at javafx.scene.Node.fireEvent(Node.java:8792)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at javafx.scene.control.Button.fire(Button.java:203)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:208)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at javafx.event.Event.fireEvent(Event.java:198)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at javafx.scene.Scene$MouseHandler.process(Scene.java:3880)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at javafx.scene.Scene.processMouseEvent(Scene.java:1873)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2606)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at java.security.AccessController.doPrivileged(AccessController.java:105)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:423)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.glass.ui.View.handleMouseEvent(View.java:557)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.glass.ui.View.notifyMouse(View.java:943)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_VA_LIST:Lcom_sun_glass_ui_View_2_0002enotifyMouse_00028IIIIIIIZZ_00029V(JNIJavaCallWrappers.java:0)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.glass.ui.win.WinApplication._runLoop(WinApplication.java)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:179)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at java.lang.Thread.run(Thread.java:829)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.thread.JavaThreads.threadStartRoutine(JavaThreads.java:552)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.windows.WindowsJavaThreads.osThreadStartRoutine(WindowsJavaThreads.java:138)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] Caused by: java.lang.ClassNotFoundException: org.apache.log4j.helpers.Loader
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.hub.ClassForNameSupport.forName(ClassForNameSupport.java:71)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at java.lang.Class.forName(DynamicHub.java:1306)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	at java.lang.Class.forName(DynamicHub.java:1290)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] 	... 79 more
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG ClassPathScanner - Scanning for classpath resources at 'classpath:db/callback' ...
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG ClassPathScanner - Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@233c0b17 ...
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG ClassPathScanner - Unable to resolve location classpath:db/callback.
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG FeatureDetector - AWS SDK available: false
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG FeatureDetector - Google Cloud Storage available: false
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' ...
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG ClassPathScanner - Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@233c0b17 ...
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG ClassPathScanner - Scanning URL: resource:db/migration
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG FeatureDetector - JBoss VFS v2 available: false
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG FeatureDetector - JBoss VFS v3 available: false
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG FeatureDetector - OSGi framework available: false
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] WARN  ClassPathScanner - Unable to scan location: D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\db\migration (unsupported protocol: resource)
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] DEBUG ClassPathScanner - Scanning for classes at classpath:db/migration
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] INFO  ENGINE - Checkpoint start
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] INFO  ENGINE - checkpointClose start
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] INFO  ENGINE - checkpointClose synched
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] INFO  ENGINE - checkpointClose script done
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] INFO  ENGINE - checkpointClose end
+[Sat Jul 31 15:02:31 PKT 2021][INFO] [SUB] INFO  ENGINE - Checkpoint end - txts: 1
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] INFO  VersionPrinter - Flyway Community Edition 7.12.0 by Redgate
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] INFO  BaseDatabaseType - Database: jdbc:hsqldb:file:C:\Users\MaqboolStudioPC\Documents\HsqlDb Database\hsqldb-database;crypt_key=C3ACDC4DA6A15C33BF2F54804C2EF281;crypt_type=AES;shutdown=true (HSQL Database Engine 2.6)
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG BaseDatabaseType - Driver  : HSQL Database Engine Driver 2.6.0
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG Flyway - DDL Transactions Supported: false
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG SchemaHistoryFactory - Schemas: 
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG SchemaHistoryFactory - Default schema: null
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG SqlScriptCallbackFactory - Scanning for SQL callbacks ...
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG DbValidate - Validating migrations ...
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] INFO  DbValidate - Successfully validated 0 migrations (execution time 00:00.002s)
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] WARN  DbValidate - No migrations found. Are your locations set up correctly?
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG DbSchemas - Skipping creation of existing schema: "PUBLIC"
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] INFO  JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG Parser - Parsing  ...
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG ParserSqlScript - Found statement at line 1: CREATE TABLE "PUBLIC"."flyway_schema_history" (
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "installed_rank" INT NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "version" VARCHAR(50),
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "description" VARCHAR(200) NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "type" VARCHAR(20) NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "script" VARCHAR(1000) NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "checksum" INT,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "installed_by" VARCHAR(100) NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "installed_on" TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "execution_time" INT NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "success" BIT NOT NULL
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] )
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG ParserSqlScript - Found statement at line 13: ALTER TABLE "PUBLIC"."flyway_schema_history" ADD CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG ParserSqlScript - Found statement at line 14: CREATE INDEX "PUBLIC"."flyway_schema_history_s_idx" ON "PUBLIC"."flyway_schema_history" ("success")
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG DefaultSqlScriptExecutor - Executing SQL: CREATE TABLE "PUBLIC"."flyway_schema_history" (
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "installed_rank" INT NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "version" VARCHAR(50),
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "description" VARCHAR(200) NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "type" VARCHAR(20) NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "script" VARCHAR(1000) NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "checksum" INT,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "installed_by" VARCHAR(100) NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "installed_on" TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "execution_time" INT NOT NULL,
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB]     "success" BIT NOT NULL
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] )
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG DefaultSqlScriptExecutor - 0 rows affected
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG DefaultSqlScriptExecutor - Executing SQL: ALTER TABLE "PUBLIC"."flyway_schema_history" ADD CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG DefaultSqlScriptExecutor - 0 rows affected
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG DefaultSqlScriptExecutor - Executing SQL: CREATE INDEX "PUBLIC"."flyway_schema_history_s_idx" ON "PUBLIC"."flyway_schema_history" ("success")
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG DefaultSqlScriptExecutor - 0 rows affected
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] DEBUG JdbcTableSchemaHistory - Created Schema History table "PUBLIC"."flyway_schema_history"
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] INFO  DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] INFO  DbMigrate - Schema "PUBLIC" is up to date. No migration necessary.
+[Sat Jul 31 15:02:32 PKT 2021][INFO] [SUB] INFO  ENGINE - Database closed
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] DEBUG Flyway - Memory usage: 51 of 8145M
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] java.sql.SQLSyntaxErrorException: user lacks privilege or object not found: TBL_MESSAGE
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.jdbc.JDBCStatement.fetchResult(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.jdbc.JDBCStatement.executeQuery(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.maqboolsolutions.flywaygraalvmtest.Main.lambda$start$0(Main.java:73)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at javafx.event.Event.fireEvent(Event.java:198)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at javafx.scene.Node.fireEvent(Node.java:8792)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at javafx.scene.control.Button.fire(Button.java:203)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:208)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at javafx.event.Event.fireEvent(Event.java:198)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at javafx.scene.Scene$MouseHandler.process(Scene.java:3880)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at javafx.scene.Scene.processMouseEvent(Scene.java:1873)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2606)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at java.security.AccessController.doPrivileged(AccessController.java:105)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:423)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.glass.ui.View.handleMouseEvent(View.java:557)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.glass.ui.View.notifyMouse(View.java:943)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_VA_LIST:Lcom_sun_glass_ui_View_2_0002enotifyMouse_00028IIIIIIIZZ_00029V(JNIJavaCallWrappers.java:0)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.glass.ui.win.WinApplication._runLoop(WinApplication.java)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:179)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at java.lang.Thread.run(Thread.java:829)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.thread.JavaThreads.threadStartRoutine(JavaThreads.java:552)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at com.oracle.svm.core.windows.WindowsJavaThreads.osThreadStartRoutine(WindowsJavaThreads.java:138)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] Caused by: org.hsqldb.HsqlException: user lacks privilege or object not found: TBL_MESSAGE
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.error.Error.error(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.error.Error.error(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.readTableName(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.readTableOrSubquery(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.XreadTableReference(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.XreadFromClause(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.XreadTableExpression(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.XreadQuerySpecification(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.XreadSimpleTable(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.XreadQueryPrimary(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.XreadQueryTerm(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.XreadQueryExpressionBody(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.XreadQueryExpression(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserDQL.compileCursorSpecification(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserCommand.compilePart(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.ParserCommand.compileStatements(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.Session.executeDirectStatement(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	at org.hsqldb.Session.execute(Unknown Source)
+[Sat Jul 31 15:02:33 PKT 2021][INFO] [SUB] 	... 51 more
+[Sat Jul 31 15:02:37 PKT 2021][FINE] Result for run until end: 0

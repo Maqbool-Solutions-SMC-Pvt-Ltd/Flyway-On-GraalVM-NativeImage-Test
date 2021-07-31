@@ -1,0 +1,33 @@
+Process
+=======
+compile
+
+Command Line
+============
+D:\Programs\graalvm-svm-windows-gluon-21.2.0-dev\bin\native-image.cmd "-Djdk.internal.lambda.eagerlyInitialize=false" --no-server -H:+ExitAfterRelocatableImageWrite -H:+SharedLibrary -H:+AddAllCharsets -H:+ReportExceptionStackTraces -H:-DeadlockWatchdogExitOnTimeout "-H:DeadlockWatchdogInterval=0" -H:+RemoveSaturatedTypeFlows "--features=org.graalvm.home.HomeFinderFeature" "-H:TempDirectory=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp" "-H:EnableURLProtocols=http,https" "-H:ReflectionConfigurationFiles=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\reflectionconfig-x86_64-windows.json" "-H:JNIConfigurationFiles=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\jniconfig-x86_64-windows.json" "-H:ResourceConfigurationFiles=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\resourceconfig-x86_64-windows.json" "-H:IncludeResourceBundles=com/sun/javafx/scene/control/skin/resources/controls,com/sun/javafx/scene/control/skin/resources/controls-nt,com.sun.javafx.tk.quantum.QuantumMessagesBundle" "-Dsvm.platform=org.graalvm.nativeimage.Platform$WINDOWS_AMD64" -cp "D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\classpathJar.jar" --allow-incomplete-classpath com.maqboolsolutions.flywaygraalvmtest.Main
+
+Output
+======
+Warning: Ignoring server-mode native-image argument --no-server.
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]    classlist:   7,092.75 ms,  0.94 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]        (cap):  13,223.95 ms,  0.94 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]        setup:  19,683.94 ms,  0.94 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]     (clinit):   1,144.59 ms,  4.27 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]   (typeflow):  83,287.61 ms,  4.27 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]    (objects):  41,443.85 ms,  4.27 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]   (features):  13,447.60 ms,  4.27 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]     analysis: 141,557.03 ms,  4.27 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]     universe:   4,911.15 ms,  4.20 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]      (parse):  13,569.41 ms,  5.27 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]     (inline):  32,052.82 ms,  5.95 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]    (compile):  86,656.27 ms,  6.04 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]      compile: 136,242.64 ms,  6.04 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]        image:   9,789.98 ms,  6.11 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]        write:   2,801.76 ms,  6.11 GB
+[com.maqboolsolutions.flywaygraalvmtest.main:2768]      [total]: 324,460.78 ms,  6.11 GB
+# Printing build artifacts to: D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\FlywayOnGraalVMNativeImageTest\com.maqboolsolutions.flywaygraalvmtest.main.build_artifacts.txt
+
+
+Result
+======
+result: 0
