@@ -1,12 +1,20 @@
 {
   "resources":{
   "includes":[
-    {"pattern":"\\QMETA-INF/services/java.sql.Driver\\E"}, 
+    {"pattern":"\\QMETA-INF/services/org.flywaydb.core.internal.database.DatabaseType\\E"}, 
+    {"pattern":"\\Qdb/migration\\E"}, 
+    {"pattern":"\\Qlog4j.xml\\E"}, 
+    {"pattern":"\\Qorg/apache/log4j/xml/log4j.dtd\\E"}, 
+    {"pattern":"\\Qorg/flywaydb/core/internal/version.txt\\E"}, 
     {"pattern":"\\Qorg/hsqldb/resources/information-schema.sql\\E"}, 
-    {"pattern":"\\Qorg/hsqldb/resources/jdklogging-default.properties\\E"}, 
-    {"pattern":"\\Qorg/hsqldb/resources/lob-schema.sql\\E"}
+    {"pattern":"\\Qorg/hsqldb/resources/lob-schema.sql\\E"}, 
+    {"pattern":"\\Qorg/slf4j/impl/StaticLoggerBinder.class\\E"}
   ]},
   "bundles":[
+    {"name":"com.sun.javafx.tk.quantum.QuantumMessagesBundle"}, 
+    {"name":"com/sun/javafx/scene/control/skin/resources/controls"}, 
+    {"name":"org.hsqldb.resources.info-column-remarks"}, 
+    {"name":"org.hsqldb.resources.info-table-remarks"}, 
     {"name":"org.hsqldb.resources.sql-state-messages"}
   ]
 }

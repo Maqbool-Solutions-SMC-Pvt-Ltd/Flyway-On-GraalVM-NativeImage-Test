@@ -9,7 +9,7 @@ public class V1_0_2__Insert_Data extends BaseJavaMigration {
     public void migrate(Context context) throws Exception {
         for (int i = 0; i < 5; i++) {
             context.getConnection().createStatement().executeUpdate(
-                    "INSERT INTO tbl_message VALUES NOW(), 'Admin'"
+                    "INSERT INTO tbl_message VALUES NOW(), 'Admin'" + i
             );
         }
     }
