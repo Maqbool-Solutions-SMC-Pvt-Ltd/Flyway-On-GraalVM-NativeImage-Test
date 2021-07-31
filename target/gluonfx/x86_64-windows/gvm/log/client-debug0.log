@@ -1,0 +1,325 @@
+[Sat Jul 31 12:21:32 PKT 2021][INFO] ==================== COMPILE TASK ====================
+[Sat Jul 31 12:21:44 PKT 2021][FINE] PB Command for check version: D:\Programs\graalvm-svm-windows-gluon-21.2.0-dev\bin\java -version
+[Sat Jul 31 12:21:44 PKT 2021][FINE] Start process check version...
+[Sat Jul 31 12:21:44 PKT 2021][FINE] [SUB] openjdk version "11.0.11" 2021-04-20
+[Sat Jul 31 12:21:44 PKT 2021][FINE] [SUB] OpenJDK Runtime Environment GraalVM 21.2.0-dev (build 11.0.11+8-jvmci-21.2-b02)
+[Sat Jul 31 12:21:44 PKT 2021][FINE] [SUB] OpenJDK 64-Bit Server VM GraalVM 21.2.0-dev (build 11.0.11+8-jvmci-21.2-b02, mixed mode, sharing)
+[Sat Jul 31 12:21:44 PKT 2021][FINE] Result for check version: 0
+[Sat Jul 31 12:21:44 PKT 2021][INFO] We will now compile your code for x86_64-microsoft-windows. This may take some time.
+[Sat Jul 31 12:21:44 PKT 2021][FINE] Extracting native libs to: D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\lib
+[Sat Jul 31 12:21:44 PKT 2021][FINE] Looking for resource: /native/windows/launcher.c
+[Sat Jul 31 12:21:44 PKT 2021][FINE] PB Command for compile-additional-sources: cl -c -DSUBSTRATE /MD /D_UNICODE /DUNICODE /DWIN32 /D_WINDOWS -ID:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\FlywayOnGraalVMNativeImageTest launcher.c
+[Sat Jul 31 12:21:44 PKT 2021][FINE] Start process compile-additional-sources...
+[Sat Jul 31 12:21:45 PKT 2021][FINE] [SUB] Microsoft (R) C/C++ Optimizing Compiler Version 19.28.29914 for x64
+[Sat Jul 31 12:21:45 PKT 2021][FINE] [SUB] Copyright (C) Microsoft Corporation.  All rights reserved.
+[Sat Jul 31 12:21:45 PKT 2021][FINE] [SUB] 
+[Sat Jul 31 12:21:45 PKT 2021][FINE] [SUB] launcher.c
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Result for compile-additional-sources: 0
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\com\maqboolsolutions\flywaygraalvmtest\Main.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\com\maqboolsolutions\flywaygraalvmtest\Main.class
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\db\migration\V1_0_1__Create_Table.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\db\migration\V1_0_1__Create_Table.class
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\db\migration\V1_0_2__Insert_Data.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\db\migration\V1_0_2__Insert_Data.class
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\log4j.xml to C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\log4j.xml
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\filter-file.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\META-INF\native-image\filter-file.json
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\jni-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\META-INF\native-image\jni-config.json
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\predefined-classes-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\META-INF\native-image\predefined-classes-config.json
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\proxy-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\META-INF\native-image\proxy-config.json
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\reflect-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\META-INF\native-image\reflect-config.json
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\resource-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\META-INF\native-image\resource-config.json
+[Sat Jul 31 12:21:46 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\serialization-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\META-INF\native-image\serialization-config.json
+[Sat Jul 31 12:21:47 PKT 2021][FINE] PB Command for jar: D:\Programs\graalvm-svm-windows-gluon-21.2.0-dev\bin\jar.exe cf C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\classes.jar -C C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281 .
+[Sat Jul 31 12:21:47 PKT 2021][FINE] Start process jar...
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Result for jar: 0
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning for init build time files
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\classes.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning for reflection files
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Adding classes from D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar::META-INF/substrate/config/reflectionconfig-x86_64-windows.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar::META-INF/substrate/config/reflectionconfig.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar::META-INF/substrate/config/reflectionconfig.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar::META-INF/substrate/config/reflectionconfig-x86_64-windows.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar::META-INF/substrate/config/reflectionconfig.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\classes.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning for JNI files
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar::META-INF/substrate/config/jniconfig-x86_64-windows.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar::META-INF/substrate/config/jniconfig.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\classes.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning for resource files
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Scanning C:\Users\MAQBOO~1\AppData\Local\Temp\classes8733397430826115281\classes.jar
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\com\maqboolsolutions\flywaygraalvmtest\Main.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\com\maqboolsolutions\flywaygraalvmtest\Main.class
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\db\migration\V1_0_1__Create_Table.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\db\migration\V1_0_1__Create_Table.class
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\db\migration\V1_0_2__Insert_Data.class to C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\db\migration\V1_0_2__Insert_Data.class
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\log4j.xml to C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\log4j.xml
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\filter-file.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\META-INF\native-image\filter-file.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\jni-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\META-INF\native-image\jni-config.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\predefined-classes-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\META-INF\native-image\predefined-classes-config.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\proxy-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\META-INF\native-image\proxy-config.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\reflect-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\META-INF\native-image\reflect-config.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\resource-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\META-INF\native-image\resource-config.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Copied resource D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\classes\META-INF\native-image\serialization-config.json to C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\META-INF\native-image\serialization-config.json
+[Sat Jul 31 12:21:48 PKT 2021][FINE] PB Command for jar: D:\Programs\graalvm-svm-windows-gluon-21.2.0-dev\bin\jar.exe cf C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\classes.jar -C C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550 .
+[Sat Jul 31 12:21:48 PKT 2021][FINE] Start process jar...
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Result for jar: 0
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning for resource bundles
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar::META-INF/substrate/config/resourcebundles
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Adding classes from C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar::META-INF/substrate/config/resourcebundles
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Scanning C:\Users\MAQBOO~1\AppData\Local\Temp\classes3275375692759639550\classes.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Copied resource D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11-desktop.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\storage-4.0.11-desktop.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Copied resource D:\.my-m2\repository\com\gluonhq\attach\storage\4.0.11\storage-4.0.11.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\storage-4.0.11.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Copied resource D:\.my-m2\repository\com\gluonhq\attach\util\4.0.11\util-4.0.11.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\util-4.0.11.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Copied resource D:\.my-m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\log4j-1.2.17.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Copied resource D:\.my-m2\repository\org\flywaydb\flyway-core\7.12.0\flyway-core-7.12.0.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\flyway-core-7.12.0.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Copied resource D:\.my-m2\repository\org\hsqldb\hsqldb\2.6.0\hsqldb-2.6.0.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\hsqldb-2.6.0.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Copied resource C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.base.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\javafx.base.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Copied resource C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.controls.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\javafx.controls.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Copied resource C:\Users\MaqboolStudioPC\.gluon\substrate\javafxStaticSdk\17-ea+14\windows-x86_64\sdk\lib\javafx.graphics.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\javafx.graphics.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Copied resource D:\.my-m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\slf4j-api-1.7.30.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Copied resource D:\.my-m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar to D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\deps\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Class-Path manifest entry for pathing jar: ..\..\..\..\classes deps\storage-4.0.11-desktop.jar deps\storage-4.0.11.jar deps\util-4.0.11.jar deps\log4j-1.2.17.jar deps\flyway-core-7.12.0.jar deps\hsqldb-2.6.0.jar deps\javafx.base.jar deps\javafx.controls.jar deps\javafx.graphics.jar deps\slf4j-api-1.7.30.jar deps\slf4j-log4j12-1.7.30.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Pathing jar created at D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\classpathJar.jar
+[Sat Jul 31 12:21:49 PKT 2021][FINE] PB Command for compile: D:\Programs\graalvm-svm-windows-gluon-21.2.0-dev\bin\native-image.cmd "-Djdk.internal.lambda.eagerlyInitialize=false" --no-server -H:+ExitAfterRelocatableImageWrite -H:+SharedLibrary -H:+AddAllCharsets -H:+ReportExceptionStackTraces -H:-DeadlockWatchdogExitOnTimeout "-H:DeadlockWatchdogInterval=0" -H:+RemoveSaturatedTypeFlows "--features=org.graalvm.home.HomeFinderFeature" "-H:TempDirectory=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp" "-H:EnableURLProtocols=http,https" "-H:ReflectionConfigurationFiles=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\reflectionconfig-x86_64-windows.json" "-H:JNIConfigurationFiles=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\jniconfig-x86_64-windows.json" "-H:ResourceConfigurationFiles=D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\resourceconfig-x86_64-windows.json" "-H:IncludeResourceBundles=com/sun/javafx/scene/control/skin/resources/controls,com/sun/javafx/scene/control/skin/resources/controls-nt,com.sun.javafx.tk.quantum.QuantumMessagesBundle" "-Dsvm.platform=org.graalvm.nativeimage.Platform$WINDOWS_AMD64" -cp "D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\tmp\classpathJar.jar" com.maqboolsolutions.flywaygraalvmtest.Main
+[Sat Jul 31 12:21:49 PKT 2021][FINE] Start process compile...
+[Sat Jul 31 12:21:52 PKT 2021][INFO] [SUB] Warning: Ignoring server-mode native-image argument --no-server.
+[Sat Jul 31 12:22:07 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:13328]    classlist:  10,430.21 ms,  0.96 GB
+[Sat Jul 31 12:22:20 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:13328]        (cap):  10,397.51 ms,  0.96 GB
+[Sat Jul 31 12:22:22 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:13328]        setup:  15,228.68 ms,  0.96 GB
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:13328]     (clinit):   1,236.23 ms,  4.09 GB
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:13328]   (typeflow):  94,674.91 ms,  4.09 GB
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:13328]    (objects):  39,470.02 ms,  4.09 GB
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:13328]   (features):   7,487.85 ms,  4.09 GB
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:13328]     analysis: 146,010.13 ms,  4.09 GB
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Warning: Aborting stand-alone image build. Unsupported features in 3 methods
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Detailed message:
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Error: com.oracle.graal.pointsto.constraints.UnresolvedElementException: Discovered unresolved method during parsing: org.flywaydb.core.internal.scanner.classpath.jboss.JBossVFSv3ClassPathLocationScanner.<init>(). To diagnose the issue you can use the --allow-incomplete-classpath option. The missing method is then reported at run time when it is accessed the first time.
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Trace: 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at parsing org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.createLocationScanner(ClassPathScanner.java:312)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Call path from entry point to org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.createLocationScanner(String): 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.createLocationScanner(ClassPathScanner.java:291)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.findResourceNamesAndParentURLs(ClassPathScanner.java:135)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.<init>(ClassPathScanner.java:79)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.ClasspathClassScanner.scanForType(ClasspathClassScanner.java:37)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.api.configuration.ClassicConfiguration.loadCallbackLocation(ClassicConfiguration.java:1326)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.<init>(Flyway.java:139)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.api.configuration.FluentConfiguration.load(FluentConfiguration.java:58)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.maqboolsolutions.flywaygraalvmtest.Main.lambda$start$0(Main.java:65)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.oracle.svm.reflect.Main_lambda$start$0_6a8897dbe89f446602f9293037a42f0a6f75ffa5_164.invoke(Unknown Source)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.lang.reflect.Method.invoke(Method.java:566)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.invokeFactoryMethod(ServiceLoader.java:737)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.get(ServiceLoader.java:720)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$3.next(ServiceLoader.java:1395)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_VARARGS:Ljava_util_Iterator_2_0002enext_00028_00029Ljava_lang_Object_2(generated:0)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Error: com.oracle.graal.pointsto.constraints.UnresolvedElementException: Discovered unresolved method during parsing: org.flywaydb.core.internal.scanner.cloud.s3.AwsS3Scanner.<init>(java.nio.charset.Charset, boolean). To diagnose the issue you can use the --allow-incomplete-classpath option. The missing method is then reported at run time when it is accessed the first time.
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Trace: 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at parsing org.flywaydb.core.internal.scanner.Scanner.<init>(Scanner.java:93)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Call path from entry point to org.flywaydb.core.internal.scanner.Scanner.<init>(Class, Collection, ClassLoader, Charset, boolean, boolean, ResourceNameCache, LocationScannerCache, boolean): 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.Scanner.<init>(Scanner.java:66)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.createResourceAndClassProviders(Flyway.java:634)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.execute(Flyway.java:497)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.migrate(Flyway.java:172)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.maqboolsolutions.flywaygraalvmtest.Main.lambda$start$0(Main.java:66)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.oracle.svm.reflect.Main_lambda$start$0_6a8897dbe89f446602f9293037a42f0a6f75ffa5_164.invoke(Unknown Source)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.lang.reflect.Method.invoke(Method.java:566)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.invokeFactoryMethod(ServiceLoader.java:737)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.get(ServiceLoader.java:720)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$3.next(ServiceLoader.java:1395)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_VARARGS:Ljava_util_Iterator_2_0002enext_00028_00029Ljava_lang_Object_2(generated:0)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Error: com.oracle.graal.pointsto.constraints.UnresolvedElementException: Discovered unresolved type during parsing: oracle.jdbc.OracleConnection. To diagnose the issue you can use the --allow-incomplete-classpath option. The missing type is then reported at run time when it is accessed the first time.
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Trace: 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at parsing org.flywaydb.core.internal.database.oracle.OracleDatabaseType.alterConnectionAsNeeded(OracleDatabaseType.java:213)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Call path from entry point to org.flywaydb.core.internal.database.oracle.OracleDatabaseType.alterConnectionAsNeeded(Connection, Configuration): 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.database.oracle.OracleDatabaseType.alterConnectionAsNeeded(OracleDatabaseType.java:206)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.openConnection(JdbcConnectionFactory.java:136)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.database.base.Database.getMigrationConnection(Database.java:273)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.callback.DefaultCallbackExecutor.onMigrateOrUndoEvent(DefaultCallbackExecutor.java:73)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:150)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.command.DbMigrate$$Lambda$1141/0x00000007c1697440.call(Unknown Source)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_VARARGS:Ljava_lang_Runnable_2_0002erun_00028_00029V(generated:0)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] com.oracle.svm.hosted.FallbackFeature$FallbackImageRequest: Aborting stand-alone image build. Unsupported features in 3 methods
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Detailed message:
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Error: com.oracle.graal.pointsto.constraints.UnresolvedElementException: Discovered unresolved method during parsing: org.flywaydb.core.internal.scanner.classpath.jboss.JBossVFSv3ClassPathLocationScanner.<init>(). To diagnose the issue you can use the --allow-incomplete-classpath option. The missing method is then reported at run time when it is accessed the first time.
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Trace: 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at parsing org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.createLocationScanner(ClassPathScanner.java:312)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Call path from entry point to org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.createLocationScanner(String): 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.createLocationScanner(ClassPathScanner.java:291)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.findResourceNamesAndParentURLs(ClassPathScanner.java:135)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.<init>(ClassPathScanner.java:79)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.ClasspathClassScanner.scanForType(ClasspathClassScanner.java:37)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.api.configuration.ClassicConfiguration.loadCallbackLocation(ClassicConfiguration.java:1326)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.<init>(Flyway.java:139)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.api.configuration.FluentConfiguration.load(FluentConfiguration.java:58)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.maqboolsolutions.flywaygraalvmtest.Main.lambda$start$0(Main.java:65)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.oracle.svm.reflect.Main_lambda$start$0_6a8897dbe89f446602f9293037a42f0a6f75ffa5_164.invoke(Unknown Source)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.lang.reflect.Method.invoke(Method.java:566)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.invokeFactoryMethod(ServiceLoader.java:737)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.get(ServiceLoader.java:720)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$3.next(ServiceLoader.java:1395)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_VARARGS:Ljava_util_Iterator_2_0002enext_00028_00029Ljava_lang_Object_2(generated:0)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Error: com.oracle.graal.pointsto.constraints.UnresolvedElementException: Discovered unresolved method during parsing: org.flywaydb.core.internal.scanner.cloud.s3.AwsS3Scanner.<init>(java.nio.charset.Charset, boolean). To diagnose the issue you can use the --allow-incomplete-classpath option. The missing method is then reported at run time when it is accessed the first time.
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Trace: 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at parsing org.flywaydb.core.internal.scanner.Scanner.<init>(Scanner.java:93)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Call path from entry point to org.flywaydb.core.internal.scanner.Scanner.<init>(Class, Collection, ClassLoader, Charset, boolean, boolean, ResourceNameCache, LocationScannerCache, boolean): 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.Scanner.<init>(Scanner.java:66)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.createResourceAndClassProviders(Flyway.java:634)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.execute(Flyway.java:497)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.migrate(Flyway.java:172)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.maqboolsolutions.flywaygraalvmtest.Main.lambda$start$0(Main.java:66)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.oracle.svm.reflect.Main_lambda$start$0_6a8897dbe89f446602f9293037a42f0a6f75ffa5_164.invoke(Unknown Source)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.lang.reflect.Method.invoke(Method.java:566)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.invokeFactoryMethod(ServiceLoader.java:737)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.get(ServiceLoader.java:720)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$3.next(ServiceLoader.java:1395)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_VARARGS:Ljava_util_Iterator_2_0002enext_00028_00029Ljava_lang_Object_2(generated:0)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Error: com.oracle.graal.pointsto.constraints.UnresolvedElementException: Discovered unresolved type during parsing: oracle.jdbc.OracleConnection. To diagnose the issue you can use the --allow-incomplete-classpath option. The missing type is then reported at run time when it is accessed the first time.
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Trace: 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at parsing org.flywaydb.core.internal.database.oracle.OracleDatabaseType.alterConnectionAsNeeded(OracleDatabaseType.java:213)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] Call path from entry point to org.flywaydb.core.internal.database.oracle.OracleDatabaseType.alterConnectionAsNeeded(Connection, Configuration): 
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.database.oracle.OracleDatabaseType.alterConnectionAsNeeded(OracleDatabaseType.java:206)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.openConnection(JdbcConnectionFactory.java:136)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.database.base.Database.getMigrationConnection(Database.java:273)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.callback.DefaultCallbackExecutor.onMigrateOrUndoEvent(DefaultCallbackExecutor.java:73)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:150)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.command.DbMigrate$$Lambda$1141/0x00000007c1697440.call(Unknown Source)
+[Sat Jul 31 12:24:49 PKT 2021][INFO] [SUB] 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_VARARGS:Ljava_lang_Runnable_2_0002erun_00028_00029V(generated:0)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.hosted.FallbackFeature.reportFallback(FallbackFeature.java:225)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.hosted.FallbackFeature.reportAsFallback(FallbackFeature.java:235)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.hosted.NativeImageGenerator.runPointsToAnalysis(NativeImageGenerator.java:764)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.hosted.NativeImageGenerator.doRun(NativeImageGenerator.java:532)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.hosted.NativeImageGenerator.run(NativeImageGenerator.java:491)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.hosted.NativeImageGeneratorRunner.buildImage(NativeImageGeneratorRunner.java:380)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.hosted.NativeImageGeneratorRunner.build(NativeImageGeneratorRunner.java:543)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.hosted.NativeImageGeneratorRunner.main(NativeImageGeneratorRunner.java:119)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.hosted.NativeImageGeneratorRunner$JDK9Plus.main(NativeImageGeneratorRunner.java:573)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] Caused by: com.oracle.graal.pointsto.constraints.UnsupportedFeatureException: Unsupported features in 3 methods
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] Detailed message:
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] Error: com.oracle.graal.pointsto.constraints.UnresolvedElementException: Discovered unresolved method during parsing: org.flywaydb.core.internal.scanner.classpath.jboss.JBossVFSv3ClassPathLocationScanner.<init>(). To diagnose the issue you can use the --allow-incomplete-classpath option. The missing method is then reported at run time when it is accessed the first time.
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] Trace: 
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at parsing org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.createLocationScanner(ClassPathScanner.java:312)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] Call path from entry point to org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.createLocationScanner(String): 
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.createLocationScanner(ClassPathScanner.java:291)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.findResourceNamesAndParentURLs(ClassPathScanner.java:135)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.classpath.ClassPathScanner.<init>(ClassPathScanner.java:79)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.ClasspathClassScanner.scanForType(ClasspathClassScanner.java:37)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.api.configuration.ClassicConfiguration.loadCallbackLocation(ClassicConfiguration.java:1326)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.<init>(Flyway.java:139)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.api.configuration.FluentConfiguration.load(FluentConfiguration.java:58)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.maqboolsolutions.flywaygraalvmtest.Main.lambda$start$0(Main.java:65)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.reflect.Main_lambda$start$0_6a8897dbe89f446602f9293037a42f0a6f75ffa5_164.invoke(Unknown Source)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at java.lang.reflect.Method.invoke(Method.java:566)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.invokeFactoryMethod(ServiceLoader.java:737)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.get(ServiceLoader.java:720)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$3.next(ServiceLoader.java:1395)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_VARARGS:Ljava_util_Iterator_2_0002enext_00028_00029Ljava_lang_Object_2(generated:0)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] Error: com.oracle.graal.pointsto.constraints.UnresolvedElementException: Discovered unresolved method during parsing: org.flywaydb.core.internal.scanner.cloud.s3.AwsS3Scanner.<init>(java.nio.charset.Charset, boolean). To diagnose the issue you can use the --allow-incomplete-classpath option. The missing method is then reported at run time when it is accessed the first time.
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] Trace: 
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at parsing org.flywaydb.core.internal.scanner.Scanner.<init>(Scanner.java:93)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] Call path from entry point to org.flywaydb.core.internal.scanner.Scanner.<init>(Class, Collection, ClassLoader, Charset, boolean, boolean, ResourceNameCache, LocationScannerCache, boolean): 
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.scanner.Scanner.<init>(Scanner.java:66)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.createResourceAndClassProviders(Flyway.java:634)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.execute(Flyway.java:497)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.Flyway.migrate(Flyway.java:172)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.maqboolsolutions.flywaygraalvmtest.Main.lambda$start$0(Main.java:66)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.reflect.Main_lambda$start$0_6a8897dbe89f446602f9293037a42f0a6f75ffa5_164.invoke(Unknown Source)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at java.lang.reflect.Method.invoke(Method.java:566)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.invokeFactoryMethod(ServiceLoader.java:737)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$ProviderImpl.get(ServiceLoader.java:720)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at java.util.ServiceLoader$3.next(ServiceLoader.java:1395)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_VARARGS:Ljava_util_Iterator_2_0002enext_00028_00029Ljava_lang_Object_2(generated:0)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] Error: com.oracle.graal.pointsto.constraints.UnresolvedElementException: Discovered unresolved type during parsing: oracle.jdbc.OracleConnection. To diagnose the issue you can use the --allow-incomplete-classpath option. The missing type is then reported at run time when it is accessed the first time.
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] Trace: 
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at parsing org.flywaydb.core.internal.database.oracle.OracleDatabaseType.alterConnectionAsNeeded(OracleDatabaseType.java:213)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] Call path from entry point to org.flywaydb.core.internal.database.oracle.OracleDatabaseType.alterConnectionAsNeeded(Connection, Configuration): 
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.database.oracle.OracleDatabaseType.alterConnectionAsNeeded(OracleDatabaseType.java:206)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.openConnection(JdbcConnectionFactory.java:136)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.database.base.Database.getMigrationConnection(Database.java:273)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.callback.DefaultCallbackExecutor.onMigrateOrUndoEvent(DefaultCallbackExecutor.java:73)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:150)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at org.flywaydb.core.internal.command.DbMigrate$$Lambda$1141/0x00000007c1697440.call(Unknown Source)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_VARARGS:Ljava_lang_Runnable_2_0002erun_00028_00029V(generated:0)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.graal.pointsto.constraints.UnsupportedFeatures.report(UnsupportedFeatures.java:129)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	at com.oracle.svm.hosted.NativeImageGenerator.runPointsToAnalysis(NativeImageGenerator.java:761)
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] 	... 6 more
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:13328]      [total]: 172,650.16 ms,  4.09 GB
+[Sat Jul 31 12:24:50 PKT 2021][INFO] [SUB] # Printing build artifacts to: D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\FlywayOnGraalVMNativeImageTest\com.maqboolsolutions.flywaygraalvmtest.main.build_artifacts.txt
+[Sat Jul 31 12:25:07 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]    classlist:   8,378.32 ms,  0.96 GB
+[Sat Jul 31 12:25:29 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]        (cap):  17,491.65 ms,  0.96 GB
+[Sat Jul 31 12:25:39 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]        setup:  31,948.03 ms,  0.96 GB
+[Sat Jul 31 12:26:12 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]     (clinit):     286.85 ms,  1.50 GB
+[Sat Jul 31 12:26:12 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]   (typeflow):  17,034.21 ms,  1.50 GB
+[Sat Jul 31 12:26:12 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]    (objects):   6,315.43 ms,  1.50 GB
+[Sat Jul 31 12:26:12 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]   (features):     668.94 ms,  1.50 GB
+[Sat Jul 31 12:26:12 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]     analysis:  24,645.30 ms,  1.50 GB
+[Sat Jul 31 12:26:14 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]     universe:   1,538.31 ms,  1.50 GB
+[Sat Jul 31 12:26:15 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]      (parse):   1,168.07 ms,  1.50 GB
+[Sat Jul 31 12:26:17 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]     (inline):   1,681.24 ms,  1.50 GB
+[Sat Jul 31 12:26:32 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]    (compile):  15,236.54 ms,  2.57 GB
+[Sat Jul 31 12:26:33 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]      compile:  19,045.35 ms,  2.57 GB
+[Sat Jul 31 12:26:36 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]        image:   2,902.93 ms,  2.57 GB
+[Sat Jul 31 12:26:38 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]        write:   2,389.55 ms,  2.57 GB
+[Sat Jul 31 12:26:38 PKT 2021][INFO] [SUB] [com.maqboolsolutions.flywaygraalvmtest.main:11892]      [total]:  99,349.37 ms,  2.57 GB
+[Sat Jul 31 12:26:38 PKT 2021][INFO] [SUB] # Printing build artifacts to: D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\FlywayOnGraalVMNativeImageTest\com.maqboolsolutions.flywaygraalvmtest.main.build_artifacts.txt
+[Sat Jul 31 12:26:39 PKT 2021][INFO] [SUB] Warning: Image 'com.maqboolsolutions.flywaygraalvmtest.main' is a fallback image that requires a JDK for execution (use --no-fallback to suppress fallback image generation and to print more detailed information why a fallback image was necessary).
+[Sat Jul 31 12:26:40 PKT 2021][FINE] Result for compile: 0
+[Sat Jul 31 12:26:40 PKT 2021][FINE] Logging process [compile] to file: D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\log\process-compile-1627716400216.log
+[Sat Jul 31 12:26:40 PKT 2021][INFO] Additional information: Objectfile should be called com.maqboolsolutions.flywaygraalvmtest.main.obj but we didn't find that under D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm
+[Sat Jul 31 12:26:40 PKT 2021][SEVERE] Compiling failed.
+Check the log files under D:\NetBeansProjects\git-projects\Flyway-On-GraalVM-NativeImage-Test\target\gluonfx\x86_64-windows\gvm\log
+And please check https://docs.gluonhq.com/ for more information.
