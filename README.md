@@ -1,6 +1,6 @@
 # FlywayOnGraalVmNativeTest
 
-A simple application with Java 11+, JavaFX 15+, GraalVM, HSQLDB, FlywayDB.
+A simple application with Java 11+, JavaFX 15+, GraalVM, HSQLDB and FlywayDB.
 
 ## Documentation
 
