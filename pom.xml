@@ -55,12 +55,6 @@
             <artifactId>flyway-core</artifactId>
             <version>7.12.0</version>
         </dependency>
-        <!--to compile Flyway on android native -->
-<!--        <dependency>-->
-<!--            <groupId>org.jboss</groupId>-->
-<!--            <artifactId>jboss-vfs</artifactId>-->
-<!--            <version>3.2.15.Final</version>-->
-<!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -90,7 +84,7 @@
 
                     <bundlesList></bundlesList>
                     <nativeImageArgs>
-<!--                        <arg>&#45;&#45;allow-incomplete-classpath</arg>-->
+                        <arg>--allow-incomplete-classpath</arg>
 
 <!--                        <arg>-H:IncludeResourceBundles=org.hsqldb.resources.sql-state-messages</arg>-->
                     </nativeImageArgs>
