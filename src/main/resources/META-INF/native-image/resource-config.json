@@ -1,18 +1,51 @@
 {
   "resources":{
   "includes":[
-    {"pattern":"\\QMETA-INF/services/org.flywaydb.core.internal.database.DatabaseType\\E"}, 
-    {"pattern":"\\Qdb/migration\\E"}, 
-    {"pattern":"\\Qlog4j.xml\\E"}, 
-    {"pattern":"\\Qorg/apache/log4j/xml/log4j.dtd\\E"}, 
-    {"pattern":"\\Qorg/flywaydb/core/internal/version.txt\\E"}, 
-    {"pattern":"\\Qorg/hsqldb/resources/information-schema.sql\\E"}, 
-    {"pattern":"\\Qorg/hsqldb/resources/lob-schema.sql\\E"}, 
-    {"pattern":"\\Qorg/slf4j/impl/StaticLoggerBinder.class\\E"}
+    {
+      "pattern":"\\QMETA-INF/services/org.flywaydb.core.internal.database.DatabaseType\\E"
+    }, 
+    {
+      "pattern":"\\Qdb/migration\\E"
+    }, 
+    {
+      "pattern":"\\Qlog4j.xml\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/apache/log4j/xml/log4j.dtd\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/flywaydb/core/internal/version.txt\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/hsqldb/resources/information-schema.sql\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/hsqldb/resources/lob-schema.sql\\E"
+    }, 
+    {
+      "pattern":"\\Qorg/slf4j/impl/StaticLoggerBinder.class\\E"
+    }
   ]},
   "bundles":[
-    {"name":"org.hsqldb.resources.info-column-remarks"}, 
-    {"name":"org.hsqldb.resources.info-table-remarks"}, 
-    {"name":"org.hsqldb.resources.sql-state-messages"}
+    {
+      "name":"com.sun.javafx.tk.quantum.QuantumMessagesBundle",
+      "locales":[""]
+    }, 
+    {
+      "name":"com/sun/javafx/scene/control/skin/resources/controls",
+      "locales":[""]
+    }, 
+    {
+      "name":"org.hsqldb.resources.info-column-remarks",
+      "locales":[""]
+    }, 
+    {
+      "name":"org.hsqldb.resources.info-table-remarks",
+      "locales":[""]
+    }, 
+    {
+      "name":"org.hsqldb.resources.sql-state-messages",
+      "locales":[""]
+    }
   ]
 }

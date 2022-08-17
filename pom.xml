@@ -15,10 +15,10 @@
         <maven.compiler.release>11</maven.compiler.release>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <javafx.version>16</javafx.version>
-        <javafx.maven.plugin.version>0.0.6</javafx.maven.plugin.version>
-        <gluonfx.maven.plugin.version>1.0.3</gluonfx.maven.plugin.version>
-        <attach.version>4.0.11</attach.version>
+        <javafx.version>18.0.2</javafx.version>
+        <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
+        <gluonfx.maven.plugin.version>1.0.15</gluonfx.maven.plugin.version>
+        <attach.version>4.0.15</attach.version>
 
         <main.class>com.maqboolsolutions.flywaygraalvmtest.Main</main.class>
     </properties>
@@ -89,6 +89,11 @@
 <!--                        <arg>-H:IncludeResourceBundles=org.hsqldb.resources.sql-state-messages</arg>-->
                     </nativeImageArgs>
                     <reflectionList>
+                        <list>org.flywaydb.core.internal.util.FeatureDetector</list>
+                        <list>org.flywaydb.core.internal.scanner.Scanner</list>
+                        <list>org.flywaydb.core.internal.scanner.classpath.ClassPathScanner</list>
+                        <list>org.flywaydb.core.internal.scanner.classpath.JarFileClassPathLocationScanner</list>
+                        <list>org.apache.log4j.helpers.Loader</list>
 <!--                        <list>org.hsqldb.jdbc.JDBCDriver</list>-->
 <!--                        <list>org.hsqldb.dbinfo.DatabaseInformationFull</list>-->
 <!--                        <list>org.hsqldb.lib.FileUtil</list> &lt;!&ndash;hsqldb 2.5.1 -> Android&ndash;&gt;-->
