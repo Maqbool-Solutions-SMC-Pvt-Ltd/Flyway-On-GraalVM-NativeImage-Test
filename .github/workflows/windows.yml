@@ -24,7 +24,7 @@ jobs:
       - name: Make staging directory
         run: mkdir staging
 
-#      - name: Gluon License
+#      - name: Gluon License (Our no license)
 #        uses: gluonhq/gluon-build-license@v1
 #        with:
 #          gluon-license: ${{ secrets.GLUON_LICENSE }}
