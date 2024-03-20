@@ -20,13 +20,14 @@ import javafx.stage.Stage;
 
 import com.gluonhq.attach.storage.StorageService;
 import com.gluonhq.attach.util.Platform;
-
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.FlywayException;
 
 public class Main extends Application {
 
-    String DB_URL = "jdbc:hsqldb:file:" + getFile("HsqlDb Database/hsqldb-database") + ";crypt_key=C3ACDC4DA6A15C33BF2F54804C2EF281;crypt_type=AES;shutdown=true";
+    String DB_URL = "jdbc:hsqldb:file:" + getFile("sampledb");
     String DB_USER = "SA";
     String DB_PASSWORD = "";
     String DRIVER = "org.hsqldb.jdbc.JDBCDriver";
@@ -58,31 +59,31 @@ public class Main extends Application {
 
         btnCreateDb.setOnAction((event) -> {
             try {
-                Flyway flyway = Flyway.configure().baselineOnMigrate(true)
-                        .dataSource(DB_URL, DB_USER, DB_PASSWORD)
+                HikariConfig config = new HikariConfig();
+                config.setJdbcUrl(DB_URL);
+                config.setUsername(DB_USER);
+                config.setPassword(DB_PASSWORD);
+                HikariDataSource dataSource = new HikariDataSource(config);
+
+                Flyway flyway = Flyway.configure()
+                        .baselineOnMigrate(true)
+                        .dataSource(dataSource)
                         .locations("db/migration")
                         .sqlMigrationPrefix("V")
                         .load();
                 flyway.migrate();
 
-                txtPath.appendText("Database Migrate ------------" + "\n");
+                txtPath.appendText("Database Migrate ------------\n");
 
-                try {
-                    Connection con = flyway.getConfiguration().getDataSource().getConnection();
-
-                    ResultSet result = con.createStatement().executeQuery("SELECT * FROM tbl_message");
-
+                try (Connection con = dataSource.getConnection();
+                     ResultSet result = con.createStatement().executeQuery("SELECT * FROM tbl_message")) {
                     while (result.next()) {
-                        txtPath.appendText("Database Message: " + result.getString(1) + " : " + result.getString(2) + "\n" + "------------" + "\n");
+                        txtPath.appendText("Database Message: " + result.getString(1) + " : " + result.getString(2) + "\n------------\n");
                     }
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
                 }
 
-
-            } catch (FlywayException ex) {
-                txtPath.appendText("Database Faild to be migrate : " + ex.getMessage() + " ------------" + "\n");
-
+            } catch (FlywayException | SQLException ex) {
+                txtPath.appendText("Database Failed to be migrated: " + ex.getMessage() + " ------------\n");
                 Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
             }
         });
@@ -93,13 +94,7 @@ public class Main extends Application {
     }
 
     public static File getFile(String name) {
-        String dir;
-
-        if (Platform.isAndroid()) {
-            dir = "Document";
-        } else {
-            dir = "Documents";
-        }
+        String dir = Platform.isAndroid() ? "Document" : "Documents";
 
         File path = null;
         try {
@@ -107,10 +102,12 @@ public class Main extends Application {
                     .flatMap(s -> s.getPublicStorage(dir))
                     .orElseThrow(() -> new FileNotFoundException("Could not access: " + dir));
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
 
-        return new File(path, name);
+        File folder = new File(path, name);
+
+        return new File(folder, name);
     }
 
 }
