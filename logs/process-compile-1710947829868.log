@@ -1,0 +1,85 @@
+Process
+=======
+compile
+
+Command Line
+============
+/programs/graalvm-community-openjdk-22+36.1/bin/native-image -Djdk.internal.lambda.eagerlyInitialize=false --no-server -H:+SharedLibrary -H:+AddAllCharsets -H:+ReportExceptionStackTraces -H:-DeadlockWatchdogExitOnTimeout -H:DeadlockWatchdogInterval=0 -H:+RemoveSaturatedTypeFlows --add-exports=org.graalvm.nativeimage.builder/com.oracle.svm.core.jdk=ALL-UNNAMED -H:+ExitAfterRelocatableImageWrite --features=com.gluonhq.substrate.feature.GluonFeature -H:TempDirectory=/root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/tmp -H:EnableURLProtocols=http,https -H:ReflectionConfigurationFiles=/root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/reflectionconfig-x86_64-linux.json -H:JNIConfigurationFiles=/root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/jniconfig-x86_64-linux.json -H:ResourceConfigurationFiles=/root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/resourceconfig-x86_64-linux.json -H:IncludeResourceBundles=com/sun/javafx/scene/control/skin/resources/controls,com/sun/javafx/scene/control/skin/resources/controls-nt,com.sun.javafx.tk.quantum.QuantumMessagesBundle -Dsvm.platform=org.graalvm.nativeimage.Platform$LINUX_AMD64 -cp /root/.m2/repository/com/gluonhq/substrate/0.0.61/substrate-0.0.61.jar:/root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/tmp/classpathJar.jar --allow-incomplete-classpath com.maqboolsolutions.flywaygraalvmtest.Main
+
+Output
+======
+Warning: Ignoring server-mode native-image argument --no-server.
+Warning: Using a deprecated option --allow-incomplete-classpath from command line. Allowing an incomplete classpath is now the default. Use --link-at-build-time to report linking errors at image build time for a class or package.
+Warning: The option '-H:ResourceConfigurationFiles=/root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/resourceconfig-x86_64-linux.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: The option '-H:IncludeResourceBundles=com/sun/javafx/scene/control/skin/resources/controls,com/sun/javafx/scene/control/skin/resources/controls-nt,com.sun.javafx.tk.quantum.QuantumMessagesBundle' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: The option '-H:-DeadlockWatchdogExitOnTimeout' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: The option '-H:+ExitAfterRelocatableImageWrite' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: The option '-H:JNIConfigurationFiles=/root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/jniconfig-x86_64-linux.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: The option '-H:EnableURLProtocols=http,https' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: The option '-H:+SharedLibrary' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: The option '-H:ReflectionConfigurationFiles=/root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/reflectionconfig-x86_64-linux.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: The option '-H:TempDirectory=/root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/tmp' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: The option '-H:DeadlockWatchdogInterval=0' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: The option '-H:+RemoveSaturatedTypeFlows' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: Please re-evaluate whether any experimental option is required, and either remove or unlock it. The build output lists all active experimental options, including where they come from and possible alternatives. If you think an experimental option should be considered as stable, please file an issue.
+========================================================================================================================
+GraalVM Native Image: Generating 'com.maqboolsolutions.flywaygraalvmtest.main' (shared library)...
+========================================================================================================================
+For detailed information and explanations on the build output, visit:
+https://github.com/oracle/graal/blob/master/docs/reference-manual/native-image/BuildOutput.md
+------------------------------------------------------------------------------------------------------------------------
+[GluonFeature] enabled for config com.oracle.svm.hosted.FeatureImpl$IsInConfigurationAccessImpl@3668d4
+GluonFeature enabled in setup com.oracle.svm.hosted.FeatureImpl$DuringSetupAccessImpl@76b224cd
+[1/8] Initializing...                                                                                  (109.3s @ 0.15GB)
+ Java version: 22+36, vendor version: GraalVM CE 22+36.1
+ Graal compiler: optimization level: 2, target machine: x86-64-v3
+ C compiler: gcc (linux, x86_64, 9.4.0)
+ Garbage collector: Serial GC (max heap size: 80% of RAM)
+ 2 user-specific feature(s):
+ - com.gluonhq.substrate.feature.GluonFeature
+ - com.oracle.svm.thirdparty.gson.GsonFeature
+------------------------------------------------------------------------------------------------------------------------
+ 11 experimental option(s) unlocked:
+ - '-H:DeadlockWatchdogInterval' (origin(s): command line)
+ - '-H:EnableURLProtocols' (alternative API option(s): --enable-http, --enable-https; origin(s): command line, command line)
+ - '-H:-DeadlockWatchdogExitOnTimeout' (origin(s): command line)
+ - '-H:+ExitAfterRelocatableImageWrite' (origin(s): command line)
+ - '-H:ReflectionConfigurationFiles': Use a reflect-config.json in your META-INF/native-image/<groupID>/<artifactID> directory instead. (origin(s): command line)
+ - '-H:ResourceConfigurationFiles': Use a resource-config.json in your META-INF/native-image/<groupID>/<artifactID> directory instead. (origin(s): command line)
+ - '-H:JNIConfigurationFiles': Use a jni-config.json in your META-INF/native-image/<groupID>/<artifactID> directory instead. (origin(s): command line)
+ - '-H:IncludeResourceBundles' (origin(s): command line, command line, command line)
+ - '-H:+SharedLibrary' (alternative API option(s): --shared; origin(s): command line)
+ - '-H:TempDirectory' (origin(s): command line)
+ - '-H:+RemoveSaturatedTypeFlows' (origin(s): command line)
+------------------------------------------------------------------------------------------------------------------------
+Build resources:
+ - 14.39GB of memory (49.0% of 29.38GB system memory, determined at start)
+ - 8 thread(s) (100.0% of 8 available processor(s), determined at start)
+[2/8] Performing analysis...  [******]                                                                 (503.7s @ 1.48GB)
+   14,389 reachable types   (88.5% of   16,256 total)
+   25,252 reachable fields  (56.5% of   44,724 total)
+   76,417 reachable methods (61.6% of  123,969 total)
+    4,371 types,   236 fields, and 3,579 methods registered for reflection
+      114 types,   130 fields, and   184 methods registered for JNI access
+        4 native libraries: dl, pthread, rt, z
+[3/8] Building universe...                                                                              (88.9s @ 1.54GB)
+[4/8] Parsing methods...      [*******]                                                                 (51.2s @ 2.52GB)
+[5/8] Inlining methods...     [****]                                                                    (47.8s @ 1.82GB)
+[6/8] Compiling methods...    [*********************]                                                  (479.1s @ 1.61GB)
+[7/8] Laying out methods...   [********]                                                                (76.9s @ 2.53GB)
+
+------------------------------------------------------------------------------------------------------------------------
+                       141.4s (9.5% of total time) in 102 GCs | Peak RSS: 5.36GB | CPU load: 2.43
+------------------------------------------------------------------------------------------------------------------------
+Produced artifacts:
+ /root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/FlywayOnGraalVMNativeImageTest/com.maqboolsolutions.flywaygraalvmtest.main.h (c_header)
+ /root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/FlywayOnGraalVMNativeImageTest/com.maqboolsolutions.flywaygraalvmtest.main_dynamic.h (c_header)
+ /root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/FlywayOnGraalVMNativeImageTest/graal_isolate.h (c_header)
+ /root/Documents/Flyway-On-GraalVM-NativeImage-Test/target/gluonfx/x86_64-linux/gvm/FlywayOnGraalVMNativeImageTest/graal_isolate_dynamic.h (c_header)
+========================================================================================================================
+Finished generating 'com.maqboolsolutions.flywaygraalvmtest.main' in 24m 33s.
+
+
+Result
+======
+result: 0
