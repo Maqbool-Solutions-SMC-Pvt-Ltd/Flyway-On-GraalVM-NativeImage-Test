@@ -2,7 +2,10 @@
   "resources":{
   "includes":[
     {
-      "pattern":"\\QMETA-INF/services/org.flywaydb.core.internal.database.DatabaseType\\E"
+      "pattern":"\\QMETA-INF/services/java.sql.Driver\\E"
+    }, 
+    {
+      "pattern":"\\QMETA-INF/services/org.flywaydb.core.extensibility.Plugin\\E"
     }, 
     {
       "pattern":"\\Qdb/migration\\E"
@@ -29,23 +32,38 @@
   "bundles":[
     {
       "name":"com.sun.javafx.tk.quantum.QuantumMessagesBundle",
-      "locales":[""]
+      "locales":[
+        "", 
+        "und"
+      ]
     }, 
     {
       "name":"com/sun/javafx/scene/control/skin/resources/controls",
-      "locales":[""]
+      "locales":[
+        "", 
+        "und"
+      ]
     }, 
     {
       "name":"org.hsqldb.resources.info-column-remarks",
-      "locales":[""]
+      "locales":[
+        "", 
+        "und"
+      ]
     }, 
     {
       "name":"org.hsqldb.resources.info-table-remarks",
-      "locales":[""]
+      "locales":[
+        "", 
+        "und"
+      ]
     }, 
     {
       "name":"org.hsqldb.resources.sql-state-messages",
-      "locales":[""]
+      "locales":[
+        "", 
+        "und"
+      ]
     }
   ]
 }
