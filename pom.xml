@@ -17,7 +17,7 @@
 
         <javafx.version>20</javafx.version>
         <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
-        <gluonfx.maven.plugin.version>1.0.22</gluonfx.maven.plugin.version>
+        <gluonfx.maven.plugin.version>1.0.23-SNAPSHOT</gluonfx.maven.plugin.version>
         <attach.version>4.0.20</attach.version>
 
         <main.class>com.maqboolsolutions.flywaygraalvmtest.Main</main.class>
@@ -58,12 +58,12 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
-            <version>10.10.0</version>
+            <version>10.11.0</version>
         </dependency>
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-database-hsqldb</artifactId>
-            <version>10.10.0</version>
+            <version>10.11.0</version>
             <scope>runtime</scope>
         </dependency>
     </dependencies>
@@ -108,7 +108,12 @@
                         <!--<list>org.hsqldb.jdbc.JDBCDriver</list>-->
                         <!--<list>org.hsqldb.dbinfo.DatabaseInformationFull</list>-->
                         <!--<list>org.hsqldb.lib.FileUtil</list> &lt;!&ndash;hsqldb 2.5.1 -> Android&ndash;&gt;-->
+
+                        <list>com.sun.glass.ui.win.WinVariant</list>
                     </reflectionList>
+                    <jniList>
+                        <list>com.sun.glass.ui.win.WinAccessible</list>
+                    </jniList>
 
                     <verbose>false</verbose>
                 </configuration>

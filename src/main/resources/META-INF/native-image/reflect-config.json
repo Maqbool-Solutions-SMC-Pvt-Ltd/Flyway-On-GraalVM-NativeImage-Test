@@ -38,7 +38,24 @@
   ]
 },
 {
-  "name":"com.sun.javafx.font.freetype.FTFactory",
+  "name":"com.sun.crypto.provider.AESCipher$General",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.glass.ui.Screen"
+},
+{
+  "name":"com.sun.glass.ui.win.WinDnDClipboard"
+},
+{
+  "name":"com.sun.glass.ui.win.WinGestureSupport"
+},
+{
+  "name":"com.sun.glass.ui.win.WinPlatformFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.font.directwrite.DWFactory",
   "methods":[{"name":"getFactory","parameterTypes":[] }]
 },
 {
@@ -69,24 +86,52 @@
   ]
 },
 {
-  "name":"com.sun.prism.sw.SWPipeline",
+  "name":"com.sun.prism.d3d.D3DPipeline",
   "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.prism.shader.FillPgram_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.FillPgram_LinearGradient_PAD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureFirstPassLCD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureRGB_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureSecondPassLCD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Texture_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Texture_LinearGradient_PAD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.hw.d3d.D3DShaderSource",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"com.sun.scenario.effect.impl.prism.PrRenderer",
   "methods":[{"name":"createRenderer","parameterTypes":["com.sun.scenario.effect.FilterContext"] }]
 },
 {
-  "name":"com.sun.scenario.effect.impl.prism.sw.PSWRenderer",
-  "methods":[{"name":"createRenderer","parameterTypes":["com.sun.scenario.effect.FilterContext"] }]
-},
-{
-  "name":"com.sun.scenario.effect.impl.sw.sse.SSEBoxShadowPeer",
+  "name":"com.sun.scenario.effect.impl.prism.ps.PPSLinearConvolveShadowPeer",
   "methods":[{"name":"<init>","parameterTypes":["com.sun.scenario.effect.FilterContext","com.sun.scenario.effect.impl.Renderer","java.lang.String"] }]
 },
 {
-  "name":"com.sun.scenario.effect.impl.sw.sse.SSERendererDelegate",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "name":"com.sun.scenario.effect.impl.prism.ps.PPSRenderer",
+  "methods":[{"name":"createRenderer","parameterTypes":["com.sun.scenario.effect.FilterContext"] }]
 },
 {
   "name":"com.zaxxer.hikari.HikariConfig",
@@ -146,12 +191,35 @@
   "methods":[{"name":"isIdeographic","parameterTypes":["int"] }]
 },
 {
+  "name":"java.lang.Class",
+  "methods":[{"name":"forName","parameterTypes":["java.lang.Module","java.lang.String"] }],
+  "queriedMethods":[{"name":"getModule","parameterTypes":[] }]
+},
+{
   "name":"java.lang.Comparable",
   "queryAllDeclaredMethods":true
 },
 {
+  "name":"java.lang.Module",
+  "queriedMethods":[
+    {"name":"getDescriptor","parameterTypes":[] }, 
+    {"name":"getLayer","parameterTypes":[] }, 
+    {"name":"getName","parameterTypes":[] }
+  ]
+},
+{
+  "name":"java.lang.ModuleLayer",
+  "methods":[
+    {"name":"boot","parameterTypes":[] }, 
+    {"name":"findModule","parameterTypes":["java.lang.String"] }
+  ]
+},
+{
   "name":"java.lang.Object",
   "queryAllPublicMethods":true
+},
+{
+  "name":"java.lang.String"
 },
 {
   "name":"java.lang.Thread",
@@ -164,6 +232,9 @@
 {
   "name":"java.nio.ByteOrder",
   "methods":[{"name":"nativeOrder","parameterTypes":[] }]
+},
+{
+  "name":"java.security.SecureRandomParameters"
 },
 {
   "name":"java.util.ResourceBundle",
@@ -195,6 +266,9 @@
 },
 {
   "name":"javafx.scene.image.Image"
+},
+{
+  "name":"javafx.scene.input.Clipboard"
 },
 {
   "name":"javafx.scene.layout.Pane"
@@ -243,23 +317,23 @@
 },
 {
   "name":"org.apache.log4j.AppenderSkeleton",
-  "queryAllPublicMethods":true
+  "allPublicMethods":true
 },
 {
   "name":"org.apache.log4j.Category",
-  "queriedMethods":[{"name":"log","parameterTypes":["java.lang.String","org.apache.log4j.Priority","java.lang.Object","java.lang.Throwable"] }]
+  "methods":[{"name":"log","parameterTypes":["java.lang.String","org.apache.log4j.Priority","java.lang.Object","java.lang.Throwable"] }]
+},
+{
+  "name":"org.apache.log4j.CategoryKey"
 },
 {
   "name":"org.apache.log4j.ConsoleAppender",
-  "queryAllPublicMethods":true,
-  "methods":[
-    {"name":"<init>","parameterTypes":[] }, 
-    {"name":"setTarget","parameterTypes":["java.lang.String"] }
-  ]
+  "allPublicMethods":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"org.apache.log4j.Layout",
-  "queryAllPublicMethods":true
+  "allPublicMethods":true
 },
 {
   "name":"org.apache.log4j.Level",
@@ -271,18 +345,18 @@
 },
 {
   "name":"org.apache.log4j.PatternLayout",
-  "queryAllPublicMethods":true,
-  "methods":[
-    {"name":"<init>","parameterTypes":[] }, 
-    {"name":"setConversionPattern","parameterTypes":["java.lang.String"] }
-  ]
+  "allPublicMethods":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"org.apache.log4j.Priority"
 },
 {
   "name":"org.apache.log4j.WriterAppender",
-  "queryAllPublicMethods":true
+  "allPublicMethods":true
+},
+{
+  "name":"org.apache.log4j.spi.Configurator"
 },
 {
   "name":"org.apache.log4j.xml.DOMConfigurator",
@@ -331,15 +405,41 @@
   "queryAllDeclaredConstructors":true
 },
 {
+  "name":"org.flywaydb.core.internal.logging.slf4j.Slf4jLogCreator",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"org.flywaydb.core.internal.proprietaryStubs.LicensingConfigurationExtensionStub",
   "allDeclaredFields":true
+},
+{
+  "name":"org.hsqldb.Constraint[]"
+},
+{
+  "name":"org.hsqldb.Expression[]"
+},
+{
+  "name":"org.hsqldb.RangeGroup[]"
+},
+{
+  "name":"org.hsqldb.Routine[]"
 },
 {
   "name":"org.hsqldb.dbinfo.DatabaseInformationFull",
   "methods":[{"name":"<init>","parameterTypes":["org.hsqldb.Database"] }]
 },
 {
+  "name":"org.hsqldb.index.Index[]"
+},
+{
   "name":"org.hsqldb.jdbc.JDBCDriver"
+},
+{
+  "name":"org.hsqldb.jdbcDriver",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.hsqldb.persist.CachedObject[]"
 },
 {
   "name":"org.slf4j.Logger"
@@ -348,8 +448,15 @@
   "name":"org.slf4j.impl.StaticLoggerBinder"
 },
 {
+  "name":"org.slf4j.spi.SLF4JServiceProvider"
+},
+{
   "name":"sun.misc.Unsafe",
   "fields":[{"name":"theUnsafe"}]
+},
+{
+  "name":"sun.security.provider.DRBG",
+  "methods":[{"name":"<init>","parameterTypes":["java.security.SecureRandomParameters"] }]
 },
 {
   "name":"sun.security.provider.MD5",
