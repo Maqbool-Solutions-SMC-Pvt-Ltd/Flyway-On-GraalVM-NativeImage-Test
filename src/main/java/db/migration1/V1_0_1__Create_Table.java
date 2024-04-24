@@ -1,4 +1,4 @@
-package db.migration;
+package db.migration1;
 
 import java.sql.PreparedStatement;
 import org.flywaydb.core.api.migration.BaseJavaMigration;

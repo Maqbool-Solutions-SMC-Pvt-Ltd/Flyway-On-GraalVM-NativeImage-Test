@@ -15,9 +15,9 @@
         <maven.compiler.release>11</maven.compiler.release>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <javafx.version>20</javafx.version>
+        <javafx.version>21</javafx.version>
         <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
-        <gluonfx.maven.plugin.version>1.0.23-SNAPSHOT</gluonfx.maven.plugin.version>
+        <gluonfx.maven.plugin.version>1.0.22</gluonfx.maven.plugin.version>
         <attach.version>4.0.20</attach.version>
 
         <main.class>com.maqboolsolutions.flywaygraalvmtest.Main</main.class>
