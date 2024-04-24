@@ -3,17 +3,19 @@ package com.maqboolsolutions.flywaygraalvmtest;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.gluonhq.charm.down.Platform;
+import com.gluonhq.charm.down.Services;
+import com.gluonhq.charm.down.plugins.FlywayContextService;
+import com.gluonhq.charm.down.plugins.StorageService;
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
@@ -24,15 +26,9 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-
-import com.gluonhq.attach.storage.StorageService;
-import com.gluonhq.attach.util.Platform;
-import com.zaxxer.hikari.HikariConfig;
-import com.zaxxer.hikari.HikariDataSource;
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.FlywayException;
-
-import javax.swing.*;
+import org.lsposed.hiddenapibypass.HiddenApiBypass;
 
 public class Main extends Application {
 
@@ -43,29 +39,37 @@ public class Main extends Application {
     Path tempDir;;
     String customDirectory;
 
+    static {
+        if (Platform.isAndroid()) {
+            HiddenApiBypass.addHiddenApiExemptions("L");
+        }
+    }
+
     @Override
     public void start(Stage pStage) {
         VBox root = new VBox(10);
         root.setAlignment(Pos.TOP_CENTER);
         root.setPadding(new Insets(10));
 
-        try {
-            // Check if the directory already exists
-            Path directoryPathFile = Path.of("directory_path.txt");
-            if (Files.exists(directoryPathFile)) {
-                String directoryPath = Files.readString(directoryPathFile);
-                System.out.println("Directory already exists: " + directoryPath);
-                deleteDirectory(directoryPath);
-            }
+        //            // Check if the directory already exists
+//            Path directoryPathFile = Path.of("directory_path.txt");
+//            if (Files.exists(directoryPathFile)) {
+//                String directoryPath = Files.readString(directoryPathFile);
+//                System.out.println("Directory already exists: " + directoryPath);
+//                deleteDirectory(directoryPath);
+//            }
+//
 
-            // Create New Directory.
-            tempDir = Files.createTempDirectory("MyCustomFolder");
-            customDirectory = tempDir.toString();
-            System.out.println("custom directory is:" +customDirectory);
+        // Create a temporary directory
+        File tempDir = FileUtils.createTempDirectory("MyCustomFolder");
+        if (tempDir != null) {
+            customDirectory = tempDir.getAbsolutePath();
+            System.out.println("Custom directory is: " + customDirectory);
+
             // Save directory path to a file
             saveDirectoryPath(customDirectory);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        } else {
+            System.out.println("Failed to create temporary directory");
         }
 
         Button btnCreateDb = new Button("Java-based Migrate Database");
@@ -91,6 +95,10 @@ public class Main extends Application {
 
         btnCreateDb.setOnAction((event) -> {
             try {
+                if (Platform.isAndroid()){
+                    Services.get(FlywayContextService.class).ifPresent(FlywayContextService::setContext);
+                }
+
                 HikariConfig config = new HikariConfig();
                 config.setJdbcUrl(DB_URL);
                 config.setUsername(DB_USER);
@@ -136,14 +144,14 @@ public class Main extends Application {
         }
     }
 
-    private static void deleteDirectory(String directoryPath) throws IOException {
-        Path directory = Path.of(directoryPath);
-        Files.walk(directory)
-                .sorted(Comparator.reverseOrder())
-                .map(Path::toFile)
-                .forEach(File::delete);
-        System.out.println("Directory deleted: " + directoryPath);
-    }
+//    private static void deleteDirectory(String directoryPath) throws IOException {
+//        Path directory = Path.of(directoryPath);
+//        Files.walk(directory)
+//                .sorted(Comparator.reverseOrder())
+//                .map(Path::toFile)
+//                .forEach(File::delete);
+//        System.out.println("Directory deleted: " + directoryPath);
+//    }
 
     private void saveFiles() {
         // Connect to Flyway database to retrieve applied migrations
@@ -169,10 +177,10 @@ public class Main extends Application {
 
                     try {
                         Path source = file.toPath();
-                        Path destination = Path.of(customDirectory, file.getName());
+                        Path destination = new File(customDirectory, file.getName()).toPath();
 
                         Files.copy(source, destination);
-                        System.out.println("Files Saved Successfully!");
+                        System.out.println("File Saved Successfully!");
                     } catch (IOException ex) {
                         // Handle exception
                         ex.printStackTrace();
@@ -278,21 +286,23 @@ public class Main extends Application {
         launch(args);
     }
 
-    public static File getFile(String name) {
-        String dir = Platform.isAndroid() ? "Document" : "Documents";
+    public File getFile(String name) {
+        String dir;
+        File path;
 
-        File path = null;
-        try {
-            path = StorageService.create()
-                    .flatMap(s -> s.getPublicStorage(dir))
-                    .orElseThrow(() -> new FileNotFoundException("Could not access: " + dir));
-        } catch (FileNotFoundException e) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+        if (Platform.isAndroid()) {
+            path = Services.get(StorageService.class)
+                    .flatMap(StorageService::getPrivateStorage)
+                    .orElseThrow(() -> new RuntimeException("Private storage is not accessible"));
+
+        } else {
+            dir = "Documents";
+
+            path = Services.get(StorageService.class)
+                    .flatMap(service -> service.getPublicStorage(dir))
+                    .orElseThrow(() -> new RuntimeException(dir + " is not available"));
         }
 
-        File folder = new File(path, name);
-
-        return new File(folder, name);
+        return new File(path, name);
     }
-
 }
