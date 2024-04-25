@@ -1,6 +1,9 @@
 package com.maqboolsolutions.flywaygraalvmtest;
 
 import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.sql.*;
@@ -15,6 +18,7 @@ import com.gluonhq.charm.down.plugins.FlywayContextService;
 import com.gluonhq.charm.down.plugins.StorageService;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -26,6 +30,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.FlywayException;
 import org.lsposed.hiddenapibypass.HiddenApiBypass;
@@ -36,7 +41,7 @@ public class Main extends Application {
     String DB_USER = "SA";
     String DB_PASSWORD = "";
     String DRIVER = "org.hsqldb.jdbc.JDBCDriver";
-    Path tempDir;;
+    Path tempDir;
     String customDirectory;
 
     static {
@@ -60,17 +65,30 @@ public class Main extends Application {
 //            }
 //
 
-        // Create a temporary directory
-        File tempDir = FileUtils.createTempDirectory("MyCustomFolder");
-        if (tempDir != null) {
-            customDirectory = tempDir.getAbsolutePath();
-            System.out.println("Custom directory is: " + customDirectory);
+       if (Platform.isAndroid()){
+           // Create a temporary directory
+           File tempDir = FileUtils.createTempDirectory("MyCustomFolder");
+           if (tempDir != null) {
+               customDirectory = tempDir.getAbsolutePath();
+               System.out.println("Custom directory is: " + customDirectory);
 
-            // Save directory path to a file
-            saveDirectoryPath(customDirectory);
-        } else {
-            System.out.println("Failed to create temporary directory");
-        }
+               // Save directory path to a file
+//            saveDirectoryPath(customDirectory);
+           } else {
+               System.out.println("Failed to create temporary directory");
+           }
+       }else {
+           // Create New Directory.
+           try {
+               tempDir = Files.createTempDirectory("MyCustomFolder");
+           } catch (IOException e) {
+               throw new RuntimeException(e);
+           }
+           customDirectory = tempDir.toString();
+           System.out.println("custom directory is:" +customDirectory);
+           // Save directory path to a file
+//           saveDirectoryPath(customDirectory);
+       }
 
         Button btnCreateDb = new Button("Java-based Migrate Database");
 
@@ -94,8 +112,16 @@ public class Main extends Application {
         saveFiles();
 
         btnCreateDb.setOnAction((event) -> {
+
+//            URL resourceUrl1 = Main.class.getResource("/assets/db/migration");
+//            // Classloader
+//            URL resourceUrl = getClass().getClassLoader().getResource("assets/db/migration");
+//
+//            System.out.println("resourceUrl :  " + resourceUrl1.getFile() + resourceUrl);
+
+
             try {
-                if (Platform.isAndroid()){
+                if (Platform.isAndroid()) {
                     Services.get(FlywayContextService.class).ifPresent(FlywayContextService::setContext);
                 }
 
@@ -105,7 +131,7 @@ public class Main extends Application {
                 config.setPassword(DB_PASSWORD);
                 HikariDataSource dataSource = new HikariDataSource(config);
 
-                String path = Main.class.getClassLoader().getResource("db/migration").getPath();
+//                String path = Main.class.getClassLoader().getResource("db/migration").getPath();
                 Flyway flyway = Flyway.configure()
                         .baselineOnMigrate(true)
                         .dataSource(dataSource)
@@ -133,20 +159,20 @@ public class Main extends Application {
         });
     }
 
-    private static void saveDirectoryPath(String directoryPath) {
-        String filePath = "directory_path.txt";
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
-            writer.write(directoryPath);
-            System.out.println("Directory path saved to: " + filePath);
-        } catch (IOException e) {
-            // Handle exception
-            e.printStackTrace();
-        }
-    }
+//    private static void saveDirectoryPath(String directoryPath) {
+//        String filePath = "directory_path.txt";
+//        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+//            writer.write(directoryPath);
+//            System.out.println("Directory path saved to: " + filePath);
+//        } catch (IOException e) {
+//            // Handle exception
+//            e.printStackTrace();
+//        }
+//    }
 
-//    private static void deleteDirectory(String directoryPath) throws IOException {
-//        Path directory = Path.of(directoryPath);
-//        Files.walk(directory)
+//    private static void deleteDirectory(String directoryPath) {
+//        String filePath = "directory_path.txt";
+//        Files.walk(filePath)
 //                .sorted(Comparator.reverseOrder())
 //                .map(Path::toFile)
 //                .forEach(File::delete);
@@ -164,34 +190,65 @@ public class Main extends Application {
         }
 
         // Logic to save files
-        String path = Main.class.getClassLoader().getResource("db/migration").getPath();
-        File[] filesToSave = new File(path).listFiles();
+        try {
+            // Get the URL of the resource directory
 
-        if (filesToSave != null) {
-            for (File file : filesToSave) {
-                // Check if the file corresponds to a migration already applied
+            URL resourceUrl1 = Main.class.getResource("/assets/db/migration");
 
-                if (!isMigrationAlreadyApplied(file.getName(), appliedMigrations)) {
 
-                    System.out.println("File '" + file.getName() + "' is not a migration already applied. Proceeding to save...");
+            URL resourceUrl = getClass().getClassLoader().getResource("assets/db/migration");
+            System.out.println("resourceUrl :  " + resourceUrl + " resourceUrl :" + resourceUrl1);
 
-                    try {
-                        Path source = file.toPath();
-                        Path destination = new File(customDirectory, file.getName()).toPath();
+            if (resourceUrl != null) {
+                // Convert the URL to a URI
+                URI resourceUri = resourceUrl.toURI();
 
-                        Files.copy(source, destination);
-                        System.out.println("File Saved Successfully!");
-                    } catch (IOException ex) {
-                        // Handle exception
-                        ex.printStackTrace();
+                System.out.println("resourceUri" + resourceUri);
+
+                // Check if the URI scheme is "file"
+                if ("file".equals(resourceUri.getScheme())) {
+
+                    File[] filesToSave = new File(resourceUri).listFiles();
+
+                    if (filesToSave != null) {
+                        for (File file : filesToSave) {
+                            // Check if the file corresponds to a migration already applied
+
+                            if (isMigrationAlreadyApplied(file.getName(), appliedMigrations)) {
+
+                                System.out.println("File '" + file.getName() + "' is not a migration already applied. Proceeding to save...");
+
+                                try {
+                                    Path source = file.toPath();
+                                    Path destination = new File(customDirectory, file.getName()).toPath();
+
+                                    Files.copy(source, destination);
+                                    System.out.println("File Saved Successfully!");
+                                } catch (IOException ex) {
+                                    // Handle exception
+                                    ex.printStackTrace();
+                                }
+                            } else {
+                                System.out.println("File '" + file.getName() + "' corresponds to a migration already applied. Skipping...");
+                            }
+                        }
+                    } else {
+                        System.out.println("Failed To Save!");
                     }
                 } else {
-                    System.out.println("File '" + file.getName() + "' corresponds to a migration already applied. Skipping...");
+                    // Handle resources packaged in JAR files or other schemes
+                    // Example: use getResourceAsStream() to access files
+                    System.out.println("Resource is not a file: " + resourceUrl);
                 }
+            } else {
+                // Handle case when resource is not found
+                System.out.println("Resource not found.");
             }
-        } else {
-            System.out.println("Failed To Save!");
+        } catch (URISyntaxException e) {
+            // Handle exceptions
+            e.printStackTrace();
         }
+
     }
 
     private List<String> getAppliedMigrationsFromDatabase() {
@@ -259,11 +316,11 @@ public class Main extends Application {
     }
 
     private void deleteFiles() {
-        // Check Directory Existence
-        File directory = new File(customDirectory);
-        if (directory.exists()) {
-            deleteFolder(directory);
-        }
+//        // Check Directory Existence
+//        File directory = new File(customDirectory);
+//        if (directory.exists()) {
+//            deleteFolder(directory);
+//        }
     }
 
     private void deleteFolder(File directory) {
