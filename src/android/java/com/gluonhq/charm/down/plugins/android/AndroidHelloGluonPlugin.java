@@ -1,7 +1,7 @@
 package com.gluonhq.charm.down.plugins.android;
 
 import android.content.res.AssetManager;
-import com.gluonhq.charm.down.HelloGluonPlugin;
+import com.gluonhq.charm.down.plugins.HelloGluonPlugin;
 import javafx.util.Pair;
 import javafxports.android.FXActivity;
 
@@ -9,16 +9,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class AndroidHelloGluonPlugin implements HelloGluonPlugin {
 
     private static final FXActivity ACTIVITY = FXActivity.getInstance();
-
-    @Override
-    public void saveMigrations() {
-
-    }
 
     @Override
     public List<Pair<InputStream, String>> migrationList(String path) {

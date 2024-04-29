@@ -12,7 +12,7 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.gluonhq.charm.down.HelloGluonPlugin;
+import com.gluonhq.charm.down.plugins.HelloGluonPlugin;
 import com.gluonhq.charm.down.Platform;
 import com.gluonhq.charm.down.Services;
 import com.gluonhq.charm.down.plugins.FlywayContextService;
