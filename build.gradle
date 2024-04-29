@@ -3,7 +3,7 @@ buildscript {
         jcenter()
         google()
         maven {
-            url 'http://nexus.gluonhq.com/nexus/content/repositories/releases'
+            url 'https://nexus.gluonhq.com/nexus/content/repositories/releases'
         }
         maven {
             url 'https://jitpack.io'
@@ -35,7 +35,7 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainClassName = 'com.maqboolsolutions.flywaygraalvmtest'
+    mainClassName = 'com.maqboolsolutions.flywaygraalvmtest.Main'
 }
 
 ext.CHARM_DOWN_VERSION = "3.8.6"
@@ -52,10 +52,10 @@ dependencies {
     androidCompile 'com.android.support:support-v4:28.0.0'
 
     compile "org.hsqldb:hsqldb:2.4.1"
-    desktopRuntime "org.hsqldb:hsqldb:2.7.2"
+    desktopRuntime "org.hsqldb:hsqldb:2.4.1"
 
-    compile 'org.slf4j:slf4j-log4j12:1.7.36'
     compile 'com.zaxxer:HikariCP-java6:2.3.13'
+    androidCompile 'org.slf4j:slf4j-android:1.7.10'
     compile 'org.flywaydb:flyway-core:6.5.7'
 }
 

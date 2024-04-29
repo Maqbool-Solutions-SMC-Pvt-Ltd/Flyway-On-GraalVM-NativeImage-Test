@@ -6,12 +6,14 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
+import com.gluonhq.charm.down.HelloGluonPlugin;
 import com.gluonhq.charm.down.Platform;
 import com.gluonhq.charm.down.Services;
 import com.gluonhq.charm.down.plugins.FlywayContextService;
@@ -31,9 +33,11 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
+import javafx.util.Pair;
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.FlywayException;
 import org.lsposed.hiddenapibypass.HiddenApiBypass;
+
 
 public class Main extends Application {
 
@@ -43,6 +47,7 @@ public class Main extends Application {
     String DRIVER = "org.hsqldb.jdbc.JDBCDriver";
     Path tempDir;
     String customDirectory;
+    File[] filesToSave;
 
     static {
         if (Platform.isAndroid()) {
@@ -56,39 +61,46 @@ public class Main extends Application {
         root.setAlignment(Pos.TOP_CENTER);
         root.setPadding(new Insets(10));
 
-        //            // Check if the directory already exists
-//            Path directoryPathFile = Path.of("directory_path.txt");
-//            if (Files.exists(directoryPathFile)) {
-//                String directoryPath = Files.readString(directoryPathFile);
-//                System.out.println("Directory already exists: " + directoryPath);
-//                deleteDirectory(directoryPath);
-//            }
-//
+        // Check if the directory already exists
+        Path directoryPathFile = Paths.get("directory_path.txt");
+        if (Files.exists(directoryPathFile)) {
+            try {
+                List<String> lines = Files.readAllLines(directoryPathFile);
+                if (!lines.isEmpty()) {
+                    String directoryPath = lines.get(0); // Read the first line
+                    System.out.println("Directory already exists: " + directoryPath);
+                    deleteDirectory(directoryPath);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
-       if (Platform.isAndroid()){
-           // Create a temporary directory
-           File tempDir = FileUtils.createTempDirectory("MyCustomFolder");
-           if (tempDir != null) {
-               customDirectory = tempDir.getAbsolutePath();
-               System.out.println("Custom directory is: " + customDirectory);
 
-               // Save directory path to a file
-//            saveDirectoryPath(customDirectory);
-           } else {
-               System.out.println("Failed to create temporary directory");
-           }
-       }else {
-           // Create New Directory.
-           try {
-               tempDir = Files.createTempDirectory("MyCustomFolder");
-           } catch (IOException e) {
-               throw new RuntimeException(e);
-           }
-           customDirectory = tempDir.toString();
-           System.out.println("custom directory is:" +customDirectory);
-           // Save directory path to a file
-//           saveDirectoryPath(customDirectory);
-       }
+        if (Platform.isAndroid()) {
+            // Create a temporary directory
+            File tempDir = FileUtils.createTempDirectory("MyCustomFolder");
+            if (tempDir != null) {
+                customDirectory = tempDir.getAbsolutePath();
+                System.out.println("Custom directory is: " + customDirectory);
+
+                // Save directory path to a file
+                saveDirectoryPath(customDirectory);
+            } else {
+                System.out.println("Failed to create temporary directory");
+            }
+        } else {
+            // Create New Directory.
+            try {
+                tempDir = Files.createTempDirectory("MyCustomFolder");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            customDirectory = tempDir.toString();
+            System.out.println("custom directory is:" + customDirectory);
+            // Save directory path to a file
+           saveDirectoryPath(customDirectory);
+        }
 
         Button btnCreateDb = new Button("Java-based Migrate Database");
 
@@ -112,13 +124,6 @@ public class Main extends Application {
         saveFiles();
 
         btnCreateDb.setOnAction((event) -> {
-
-//            URL resourceUrl1 = Main.class.getResource("/assets/db/migration");
-//            // Classloader
-//            URL resourceUrl = getClass().getClassLoader().getResource("assets/db/migration");
-//
-//            System.out.println("resourceUrl :  " + resourceUrl1.getFile() + resourceUrl);
-
 
             try {
                 if (Platform.isAndroid()) {
@@ -159,25 +164,29 @@ public class Main extends Application {
         });
     }
 
-//    private static void saveDirectoryPath(String directoryPath) {
-//        String filePath = "directory_path.txt";
-//        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
-//            writer.write(directoryPath);
-//            System.out.println("Directory path saved to: " + filePath);
-//        } catch (IOException e) {
-//            // Handle exception
-//            e.printStackTrace();
-//        }
-//    }
+    private static void saveDirectoryPath(String directoryPath) {
+        String filePath = "directory_path.txt";
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            writer.write(directoryPath);
+            System.out.println("Directory path saved to: " + filePath);
+        } catch (IOException e) {
+            // Handle exception
+            e.printStackTrace();
+        }
+    }
 
-//    private static void deleteDirectory(String directoryPath) {
-//        String filePath = "directory_path.txt";
-//        Files.walk(filePath)
-//                .sorted(Comparator.reverseOrder())
-//                .map(Path::toFile)
-//                .forEach(File::delete);
-//        System.out.println("Directory deleted: " + directoryPath);
-//    }
+    private static void deleteDirectory(String directoryPath) {
+        String filePath = "directory_path.txt";
+        try {
+            Files.walk(Paths.get(filePath))
+                    .sorted(Comparator.reverseOrder())
+                    .map(Path::toFile)
+                    .forEach(File::delete);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Directory deleted: " + directoryPath);
+    }
 
     private void saveFiles() {
         // Connect to Flyway database to retrieve applied migrations
@@ -191,64 +200,72 @@ public class Main extends Application {
 
         // Logic to save files
         try {
-            // Get the URL of the resource directory
+            URL resourceUrl = null;
 
-            URL resourceUrl1 = Main.class.getResource("/assets/db/migration");
+            if (Platform.isAndroid()) {
+                Optional<List<Pair<InputStream, String>>> migrationListOptional = Services.get(HelloGluonPlugin.class)
+                        .flatMap(helloGluonPlugin -> {
+                            // Call the migrationList method with the path
+                            List<Pair<InputStream, String>> list = helloGluonPlugin.migrationList("db/migration");
+                            return Optional.ofNullable(list);
+                        });
 
+                // Extract the migration list if it exists
+                List<Pair<InputStream, String>> migrationList = migrationListOptional.orElse(new ArrayList<>());
 
-            URL resourceUrl = getClass().getClassLoader().getResource("assets/db/migration");
-            System.out.println("resourceUrl :  " + resourceUrl + " resourceUrl :" + resourceUrl1);
+                // Save input streams to files
+                List<File> savedFiles = new ArrayList<>();
+                for (Pair<InputStream, String> pair : migrationList) {
+                    InputStream inputStream = pair.getKey();
+                    String originalFileName = pair.getValue();
+                    if (inputStream != null && originalFileName != null) {
+                        // Save input stream to file
+                        File outputFile = saveInputStreamToFile(inputStream, originalFileName);
+                        if (outputFile != null) {
+                            savedFiles.add(outputFile);
+                        }
+                    }
+                }
 
-            if (resourceUrl != null) {
-                // Convert the URL to a URI
+                // Convert saved files to File objects
+                filesToSave = savedFiles.toArray(new File[0]);
+            } else {
+                resourceUrl = Objects.requireNonNull(getClass().getResource("/assets/db/migration"));
                 URI resourceUri = resourceUrl.toURI();
-
-                System.out.println("resourceUri" + resourceUri);
-
-                // Check if the URI scheme is "file"
                 if ("file".equals(resourceUri.getScheme())) {
+                    filesToSave = new File(resourceUri).listFiles();
+                }else {
+                    // Handle case when resource is not found
+                    System.out.println("Resource not found.");
+                }
+            }
 
-                    File[] filesToSave = new File(resourceUri).listFiles();
+            if (filesToSave != null) {
+                for (File file : filesToSave) {
+                    // Check if the file corresponds to a migration already applied
 
-                    if (filesToSave != null) {
-                        for (File file : filesToSave) {
-                            // Check if the file corresponds to a migration already applied
+                    if (!isMigrationAlreadyApplied(file.getName(), appliedMigrations)) {
 
-                            if (isMigrationAlreadyApplied(file.getName(), appliedMigrations)) {
+                        System.out.println("File '" + file.getName() + "' is not a migration already applied. Proceeding to save...");
 
-                                System.out.println("File '" + file.getName() + "' is not a migration already applied. Proceeding to save...");
+                        try {
+                            Path source = file.toPath();
+                            Path destination = new File(customDirectory, file.getName()).toPath();
 
-                                try {
-                                    Path source = file.toPath();
-                                    Path destination = new File(customDirectory, file.getName()).toPath();
-
-                                    Files.copy(source, destination);
-                                    System.out.println("File Saved Successfully!");
-                                } catch (IOException ex) {
-                                    // Handle exception
-                                    ex.printStackTrace();
-                                }
-                            } else {
-                                System.out.println("File '" + file.getName() + "' corresponds to a migration already applied. Skipping...");
-                            }
+                            Files.copy(source, destination);
+                        } catch (IOException ex) {
+                            // Handle exception
+                            ex.printStackTrace();
                         }
                     } else {
                         System.out.println("Failed To Save!");
+                        System.out.println("File '" + file.getName() + "' corresponds to a migration already applied. Skipping...");
                     }
-                } else {
-                    // Handle resources packaged in JAR files or other schemes
-                    // Example: use getResourceAsStream() to access files
-                    System.out.println("Resource is not a file: " + resourceUrl);
                 }
-            } else {
-                // Handle case when resource is not found
-                System.out.println("Resource not found.");
             }
-        } catch (URISyntaxException e) {
-            // Handle exceptions
+            } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-
     }
 
     private List<String> getAppliedMigrationsFromDatabase() {
@@ -316,7 +333,7 @@ public class Main extends Application {
     }
 
     private void deleteFiles() {
-//        // Check Directory Existence
+        // Check Directory Existence
 //        File directory = new File(customDirectory);
 //        if (directory.exists()) {
 //            deleteFolder(directory);
@@ -361,5 +378,26 @@ public class Main extends Application {
         }
 
         return new File(path, name);
+    }
+
+    private File saveInputStreamToFile(InputStream inputStream, String fileName) {
+        try {
+            // Create a file with the original file name
+            File outputFile = new File(customDirectory, fileName);
+
+            // Write the input stream to the file
+            try (FileOutputStream outputStream = new FileOutputStream(outputFile)) {
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+            }
+
+            return outputFile;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

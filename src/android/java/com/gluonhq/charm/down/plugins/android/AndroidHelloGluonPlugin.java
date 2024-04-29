@@ -1,34 +1,42 @@
 package com.gluonhq.charm.down.plugins.android;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.support.v4.provider.DocumentFile;
+import android.content.res.AssetManager;
 import com.gluonhq.charm.down.HelloGluonPlugin;
-import com.maqboolsolutions.flywaygraalvmtest.Main;
+import javafx.util.Pair;
 import javafxports.android.FXActivity;
-import java.io.*;
-import java.nio.file.Files;
-import java.sql.*;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
-import java.util.zip.ZipOutputStream;
 
-import static android.app.Activity.RESULT_OK;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class AndroidHelloGluonPlugin implements HelloGluonPlugin {
 
     private static final FXActivity ACTIVITY = FXActivity.getInstance();
-    private Connection connection;
-    private static final Logger LOG = Logger.getLogger(AndroidHelloGluonPlugin.class.getName());
 
     @Override
-    public void saveToHsqldb() {
+    public void saveMigrations() {
 
+    }
+
+    @Override
+    public List<Pair<InputStream, String>> migrationList(String path) {
+        List<Pair<InputStream, String>> migrationFiles = new ArrayList<>();
+        AssetManager assetManager = ACTIVITY.getAssets();
+
+        try {
+            String[] files = assetManager.list(path);
+            if (files != null) {
+                for (String file : files) {
+                    InputStream inputStream = assetManager.open(path + "/" + file);
+                    migrationFiles.add(new Pair<>(inputStream, file));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return migrationFiles;
     }
 }
