@@ -11,7 +11,6 @@ import java.sql.*;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import com.gluonhq.charm.down.HelloGluonPlugin;
 import com.gluonhq.charm.down.Platform;
@@ -99,7 +98,7 @@ public class Main extends Application {
             customDirectory = tempDir.toString();
             System.out.println("custom directory is:" + customDirectory);
             // Save directory path to a file
-           saveDirectoryPath(customDirectory);
+            saveDirectoryPath(customDirectory);
         }
 
         Button btnCreateDb = new Button("Java-based Migrate Database");
@@ -137,19 +136,14 @@ public class Main extends Application {
                 HikariDataSource dataSource = new HikariDataSource(config);
 
 //                String path = Main.class.getClassLoader().getResource("db/migration").getPath();
-                Flyway flyway = Flyway.configure()
-                        .baselineOnMigrate(true)
-                        .dataSource(dataSource)
+                Flyway flyway = Flyway.configure().baselineOnMigrate(true).dataSource(dataSource)
 //                        .locations("db/migration1")
-                        .locations("filesystem:" + customDirectory)
-                        .sqlMigrationPrefix("V")
-                        .load();
+                        .locations("filesystem:" + customDirectory).sqlMigrationPrefix("V").load();
                 flyway.migrate();
 
                 txtPath.appendText("Database Migrate ------------\n");
 
-                try (Connection con = dataSource.getConnection();
-                     ResultSet result = con.createStatement().executeQuery("SELECT * FROM tbl_message")) {
+                try (Connection con = dataSource.getConnection(); ResultSet result = con.createStatement().executeQuery("SELECT * FROM tbl_message")) {
                     while (result.next()) {
                         txtPath.appendText("Database Message: " + result.getString(1) + " : " + result.getString(2) + "\n------------\n");
                     }
@@ -178,10 +172,7 @@ public class Main extends Application {
     private static void deleteDirectory(String directoryPath) {
         String filePath = "directory_path.txt";
         try {
-            Files.walk(Paths.get(filePath))
-                    .sorted(Comparator.reverseOrder())
-                    .map(Path::toFile)
-                    .forEach(File::delete);
+            Files.walk(Paths.get(filePath)).sorted(Comparator.reverseOrder()).map(Path::toFile).forEach(File::delete);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -203,12 +194,11 @@ public class Main extends Application {
             URL resourceUrl = null;
 
             if (Platform.isAndroid()) {
-                Optional<List<Pair<InputStream, String>>> migrationListOptional = Services.get(HelloGluonPlugin.class)
-                        .flatMap(helloGluonPlugin -> {
-                            // Call the migrationList method with the path
-                            List<Pair<InputStream, String>> list = helloGluonPlugin.migrationList("db/migration");
-                            return Optional.ofNullable(list);
-                        });
+                Optional<List<Pair<InputStream, String>>> migrationListOptional = Services.get(HelloGluonPlugin.class).flatMap(helloGluonPlugin -> {
+                    // Call the migrationList method with the path
+                    List<Pair<InputStream, String>> list = helloGluonPlugin.migrationList("db/migration");
+                    return Optional.ofNullable(list);
+                });
 
                 // Extract the migration list if it exists
                 List<Pair<InputStream, String>> migrationList = migrationListOptional.orElse(new ArrayList<>());
@@ -234,7 +224,7 @@ public class Main extends Application {
                 URI resourceUri = resourceUrl.toURI();
                 if ("file".equals(resourceUri.getScheme())) {
                     filesToSave = new File(resourceUri).listFiles();
-                }else {
+                } else {
                     // Handle case when resource is not found
                     System.out.println("Resource not found.");
                 }
@@ -258,12 +248,11 @@ public class Main extends Application {
                             ex.printStackTrace();
                         }
                     } else {
-                        System.out.println("Failed To Save!");
                         System.out.println("File '" + file.getName() + "' corresponds to a migration already applied. Skipping...");
                     }
                 }
             }
-            } catch (URISyntaxException e) {
+        } catch (URISyntaxException e) {
             e.printStackTrace();
         }
     }
@@ -334,10 +323,10 @@ public class Main extends Application {
 
     private void deleteFiles() {
         // Check Directory Existence
-//        File directory = new File(customDirectory);
-//        if (directory.exists()) {
-//            deleteFolder(directory);
-//        }
+        File directory = new File(customDirectory);
+        if (directory.exists()) {
+            deleteFolder(directory);
+        }
     }
 
     private void deleteFolder(File directory) {
@@ -365,16 +354,12 @@ public class Main extends Application {
         File path;
 
         if (Platform.isAndroid()) {
-            path = Services.get(StorageService.class)
-                    .flatMap(StorageService::getPrivateStorage)
-                    .orElseThrow(() -> new RuntimeException("Private storage is not accessible"));
+            path = Services.get(StorageService.class).flatMap(StorageService::getPrivateStorage).orElseThrow(() -> new RuntimeException("Private storage is not accessible"));
 
         } else {
             dir = "Documents";
 
-            path = Services.get(StorageService.class)
-                    .flatMap(service -> service.getPublicStorage(dir))
-                    .orElseThrow(() -> new RuntimeException(dir + " is not available"));
+            path = Services.get(StorageService.class).flatMap(service -> service.getPublicStorage(dir)).orElseThrow(() -> new RuntimeException(dir + " is not available"));
         }
 
         return new File(path, name);
