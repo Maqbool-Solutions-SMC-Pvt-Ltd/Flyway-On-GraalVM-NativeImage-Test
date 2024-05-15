@@ -14,7 +14,13 @@
       "pattern":"\\QMETA-INF/services/org.slf4j.spi.SLF4JServiceProvider\\E"
     }, 
     {
-      "pattern":"\\Qdb/migration\\E"
+      "pattern":"\\Qdb/migrations/V1_0_1__Create_Table.sql\\E"
+    }, 
+    {
+      "pattern":"\\Qdb/migrations/V1_0_2__Insert_Data.sql\\E"
+    }, 
+    {
+      "pattern":"\\Qdb/migrations\\E"
     }, 
     {
       "pattern":"\\Qlog4j.xml\\E"
@@ -38,30 +44,46 @@
   "bundles":[
     {
       "name":"com.sun.javafx.tk.quantum.QuantumMessagesBundle",
-      "locales":["und"]
+      "locales":[
+        "", 
+        "und"
+      ]
     }, 
     {
       "name":"com/sun/glass/ui/win/themes",
       "locales":[
+        "", 
         "en", 
         "und"
       ]
     }, 
     {
       "name":"com/sun/javafx/scene/control/skin/resources/controls",
-      "locales":["und"]
+      "locales":[
+        "", 
+        "und"
+      ]
     }, 
     {
       "name":"org.hsqldb.resources.info-column-remarks",
-      "locales":["und"]
+      "locales":[
+        "", 
+        "und"
+      ]
     }, 
     {
       "name":"org.hsqldb.resources.info-table-remarks",
-      "locales":["und"]
+      "locales":[
+        "", 
+        "und"
+      ]
     }, 
     {
       "name":"org.hsqldb.resources.sql-state-messages",
-      "locales":["und"]
+      "locales":[
+        "", 
+        "und"
+      ]
     }
   ]
 }

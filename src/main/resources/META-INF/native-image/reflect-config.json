@@ -176,11 +176,11 @@
   ]
 },
 {
-  "name":"db.migration.V1_0_1__Create_Table",
+  "name":"db.migrations.V1_0_1__Create_Table",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"db.migration.V1_0_2__Insert_Data",
+  "name":"db.migrations.V1_0_2__Insert_Data",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {

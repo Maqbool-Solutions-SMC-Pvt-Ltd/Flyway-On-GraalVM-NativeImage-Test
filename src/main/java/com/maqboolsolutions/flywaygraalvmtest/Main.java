@@ -1,8 +1,10 @@
 package com.maqboolsolutions.flywaygraalvmtest;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.sql.*;
+import java.io.*;
+import java.net.URISyntaxException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -59,18 +61,48 @@ public class Main extends Application {
 
         btnCreateDb.setOnAction((event) -> {
             try {
+
+                txtPath.appendText(getSQLFiles() + "\n");
+
                 HikariConfig config = new HikariConfig();
                 config.setJdbcUrl(DB_URL);
                 config.setUsername(DB_USER);
                 config.setPassword(DB_PASSWORD);
                 HikariDataSource dataSource = new HikariDataSource(config);
 
+
+                String path = Main.class.getClassLoader().getResource("db/migrations").getPath();
+
+                txtPath.appendText("Path: " + path + "\n");
+
+                File file = null;
+                try {
+                    file = new File(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath());
+                } catch (URISyntaxException e) {
+                    throw new RuntimeException(e);
+                }
+                String basePath = file.getParent();
+
+                txtPath.appendText("basePath " + basePath + "\n");
+
+                File resourcesDirectory = new File("src/db/migrations");
+
+                Main.class.getClassLoader().getResource("db/migrations").getPath();
+
+
+                txtPath.appendText("path 1" + resourcesDirectory.getAbsolutePath() + "\n");
+                txtPath.appendText("path 1" + Main.class.getResource("/db/migrations").toString() + "\n");
+                txtPath.appendText("path 1" + Main.class.getResource("/db/migrations").getPath() + "\n");
+                txtPath.appendText("path 1" + Main.class.getResource("/db/migrations").getFile() + "\n");
+
+
                 Flyway flyway = Flyway.configure()
                         .baselineOnMigrate(true)
                         .dataSource(dataSource)
-                        .locations("db/migration")
+                        .locations("filesystem:" + path)
                         .sqlMigrationPrefix("V")
                         .load();
+
                 flyway.migrate();
 
                 txtPath.appendText("Database Migrate ------------\n");
@@ -80,11 +112,15 @@ public class Main extends Application {
                     while (result.next()) {
                         txtPath.appendText("Database Message: " + result.getString(1) + " : " + result.getString(2) + "\n------------\n");
                     }
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
                 }
 
-            } catch (FlywayException | SQLException ex) {
+            } catch (FlywayException ex) {
                 txtPath.appendText("Database Failed to be migrated: " + ex.getMessage() + " ------------\n");
                 Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
         });
     }
@@ -108,6 +144,29 @@ public class Main extends Application {
         File folder = new File(path, name);
 
         return new File(folder, name);
+    }
+
+    public static String getSQLFiles() throws IOException {
+        // Load SQL file from resources
+        InputStream inputStream = Main.class.getClassLoader().getResourceAsStream("db/migrations/V1_0_1__Create_Table.sql");
+//        InputStream inputStream = Main.class.getResourceAsStream("/db/migrations/V1_0_1__Create_Table.sql");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+
+        // Read SQL file content
+        StringBuilder content = new StringBuilder();
+        String line;
+        while ((line = reader.readLine()) != null) {
+            content.append(line).append("\n");
+        }
+
+        // Close resources
+        reader.close();
+        inputStream.close();
+
+        // Use SQL content as needed
+        String sqlContent = content.toString();
+
+        return sqlContent;
     }
 
 }
